@@ -1,0 +1,587 @@
+
+.parentx-static .vs-sidebar-background {
+  display: none;
+}
+.vs-sidebar--background {
+  background: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 20000;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+.vs-sidebar {
+  background: #fff;
+  z-index: 3000;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  max-width: 260px;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.05);
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  z-index: 40000;
+}
+.vuesax-app-is-rtl .vs-sidebar {
+  right: 0;
+}
+.vuesax-app-is-ltr .vs-sidebar {
+  left: 0;
+}
+.vs-sidebar.vs-sidebar-reduce {
+  max-width: 54px;
+  border-radius: 0 10px 10px 0;
+}
+.vs-sidebar.vs-sidebar-reduce h4 {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100%;
+  font-size: 0.7rem;
+}
+.vs-sidebar.vs-sidebar-reduce h4 i {
+  opacity: 0;
+}
+.vuesax-app-is-rtl .vs-sidebar.vs-sidebar-reduce ul {
+  padding-right: 0 !important;
+}
+.vuesax-app-is-ltr .vs-sidebar.vs-sidebar-reduce ul {
+  padding-left: 0 !important;
+}
+.vs-sidebar.vs-sidebar-reduce .con-vs-avatar {
+  width: 40px !important;
+  height: 40px !important;
+}
+.vs-sidebar.vs-sidebar-reduce.vs-sidebar-reduceNotHoverExpand h4 {
+  text-align: center;
+}
+.vs-sidebar.vs-sidebar-reduce.vs-sidebar-reduceNotHoverExpand
+  h4:hover
+  ~ .vs-sidebar--tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+.vuesax-app-is-rtl
+  .vs-sidebar.vs-sidebar-reduce.vs-sidebar-reduceNotHoverExpand
+  h4:hover
+  ~ .vs-sidebar--tooltip {
+  -webkit-transform: translate(-5px, -110%);
+  transform: translate(-5px, -110%);
+}
+.vuesax-app-is-ltr
+  .vs-sidebar.vs-sidebar-reduce.vs-sidebar-reduceNotHoverExpand
+  h4:hover
+  ~ .vs-sidebar--tooltip {
+  -webkit-transform: translate(5px, -110%);
+  transform: translate(5px, -110%);
+}
+.vs-sidebar.vs-sidebar-reduce:hover:not(.vs-sidebar-reduceNotRebound):not(.vs-sidebar-reduceNotHoverExpand) {
+  -webkit-animation: expand 0.4s ease 0.15s;
+  animation: expand 0.4s ease 0.15s;
+}
+.vs-sidebar.vs-sidebar-reduce:hover:not(.vs-sidebar-reduceNotHoverExpand) {
+  max-width: 260px;
+}
+.vs-sidebar.vs-sidebar-reduce:hover:not(.vs-sidebar-reduceNotHoverExpand) h4 i {
+  opacity: 1;
+}
+.vs-sidebar.vs-sidebar-reduce .vs-sidebar--item {
+  overflow: hidden;
+}
+.vs-sidebar.vs-sidebar-reduce .vs-sidebar--item i {
+  padding: 10px;
+}
+.vuesax-app-is-rtl .vs-sidebar.vs-sidebar-position-right {
+  right: auto;
+}
+.vuesax-app-is-ltr .vs-sidebar.vs-sidebar-position-right {
+  left: auto;
+}
+.vuesax-app-is-rtl .vs-sidebar.vs-sidebar-position-right {
+  left: 0;
+}
+.vuesax-app-is-ltr .vs-sidebar.vs-sidebar-position-right {
+  right: 0;
+}
+.vs-sidebar.vs-sidebar-position-right.vs-sidebar-reduce {
+  border-radius: 10px 0 0 10px;
+}
+.vuesax-app-is-rtl .vs-sidebar.vs-sidebar-position-right .vs-sidebar-tooltip {
+  right: auto;
+}
+.vuesax-app-is-ltr .vs-sidebar.vs-sidebar-position-right .vs-sidebar-tooltip {
+  left: auto;
+}
+.vuesax-app-is-rtl .vs-sidebar.vs-sidebar-position-right .vs-sidebar-tooltip {
+  left: 70px;
+}
+.vuesax-app-is-ltr .vs-sidebar.vs-sidebar-position-right .vs-sidebar-tooltip {
+  right: 70px;
+}
+.vs-sidebar.vs-sidebar-position-right .vs-sidebar-tooltip:after {
+  -webkit-box-shadow: 4px 0 6px -3px rgba(0, 0, 0, 0.07);
+  box-shadow: 4px 0 6px -3px rgba(0, 0, 0, 0.07);
+}
+.vuesax-app-is-rtl
+  .vs-sidebar.vs-sidebar-position-right
+  .vs-sidebar-tooltip:after {
+  right: auto;
+}
+.vuesax-app-is-ltr
+  .vs-sidebar.vs-sidebar-position-right
+  .vs-sidebar-tooltip:after {
+  left: auto;
+}
+.vuesax-app-is-rtl
+  .vs-sidebar.vs-sidebar-position-right
+  .vs-sidebar-tooltip:after {
+  left: 5px;
+}
+.vuesax-app-is-ltr
+  .vs-sidebar.vs-sidebar-position-right
+  .vs-sidebar-tooltip:after {
+  right: 5px;
+}
+.vs-sidebar.vs-sidebar-parent {
+  position: absolute;
+  height: 100% !important;
+  top: 0;
+}
+.vs-sidebar.vs-sidebar-staticPosition {
+  position: relative;
+}
+.vs-sidebar .vs-divider-text {
+  opacity: 0.7;
+}
+.vs-sidebar--footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+.vs-sidebar--items {
+  padding: 10px 0;
+  background: inherit;
+  overflow-y: auto;
+}
+.vs-sidebar--item {
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.vs-sidebar--item i.material-icons {
+  -webkit-transition: border 0.25s ease;
+  transition: border 0.25s ease;
+  font-size: 1rem;
+}
+.vuesax-app-is-rtl .vs-sidebar--item i.material-icons {
+  margin-left: 8px;
+}
+.vuesax-app-is-ltr .vs-sidebar--item i.material-icons {
+  margin-right: 8px;
+}
+.vs-sidebar--item a {
+  padding: 10px;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: inherit;
+  opacity: 0.8;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+.vs-sidebar--item a:hover {
+  opacity: 1;
+}
+.vs-sidebar--header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 10px 5px;
+}
+.vs-sidebar-group {
+  background: inherit;
+  position: relative;
+}
+.vs-sidebar-group > ul {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.vs-sidebar-group h4 {
+  padding: 10px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  border-bottom: 1px solid transparent;
+  background: inherit;
+  font-size: 0.7rem;
+}
+.vs-sidebar-group h4 i {
+  position: absolute;
+}
+.vuesax-app-is-rtl .vs-sidebar-group h4 i {
+  left: 10px;
+}
+.vuesax-app-is-ltr .vs-sidebar-group h4 i {
+  right: 10px;
+}
+.vs-sidebar-group .vs-icon {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.vs-sidebar-group.vs-sidebar-group-open > ul {
+  opacity: 1;
+}
+.vuesax-app-is-rtl .vs-sidebar-group.vs-sidebar-group-open > ul {
+  padding-right: 10px;
+}
+.vuesax-app-is-ltr .vs-sidebar-group.vs-sidebar-group-open > ul {
+  padding-left: 10px;
+}
+.vs-sidebar-group.vs-sidebar-group-open > ul .vs-sidebar--item:last-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.vs-sidebar-group.vs-sidebar-group-open > h4 {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(transparent),
+    to(rgba(0, 0, 0, 0.01))
+  );
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.01));
+}
+.vs-sidebar-group.vs-sidebar-group-open > h4 > .vs-icon {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.vs-sidebar--tooltip {
+  opacity: 0;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  background: inherit;
+  -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.07);
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.07);
+  padding: 4px 8px;
+  border-radius: 4px;
+  position: fixed;
+  pointer-events: none;
+  visibility: hidden;
+}
+.vuesax-app-is-rtl .vs-sidebar--tooltip {
+  right: 60px;
+}
+.vuesax-app-is-ltr .vs-sidebar--tooltip {
+  left: 60px;
+}
+.vuesax-app-is-rtl .vs-sidebar--tooltip {
+  -webkit-transform: translate(-15px, -110%);
+  transform: translate(-15px, -110%);
+}
+.vuesax-app-is-ltr .vs-sidebar--tooltip {
+  -webkit-transform: translate(15px, -110%);
+  transform: translate(15px, -110%);
+}
+.vs-sidebar--tooltip:after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: inherit;
+  -webkit-box-shadow: -4px 0 6px -3px rgba(0, 0, 0, 0.07);
+  box-shadow: -4px 0 6px -3px rgba(0, 0, 0, 0.07);
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+  transform: translateY(-50%) rotate(45deg);
+}
+.vuesax-app-is-rtl .vs-sidebar--tooltip:after {
+  right: -5px;
+}
+.vuesax-app-is-ltr .vs-sidebar--tooltip:after {
+  left: -5px;
+}
+.vs-sidebar--group-items {
+  padding: 0;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  max-height: 0;
+  overflow: hidden;
+  background: inherit;
+}
+.vs-sidebar-primary .vs-sidebar--item a:hover {
+  color: rgba(var(--vs-primary), 1);
+}
+.vs-sidebar-primary .vs-sidebar-item-active {
+  font-weight: 700;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(transparent),
+    to(rgba(0, 0, 0, 0.01))
+  );
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.01));
+  border-right: 3px solid rgba(var(--vs-primary), 1) !important;
+}
+.vuesax-app-is-rtl .vs-sidebar-primary .vs-sidebar-item-active {
+  border-left: 3px solid rgba(var(--vs-primary), 1) !important;
+}
+.vuesax-app-is-ltr .vs-sidebar-primary .vs-sidebar-item-active {
+  border-right: 3px solid rgba(var(--vs-primary), 1) !important;
+}
+.vs-sidebar-primary .vs-sidebar-item-active a {
+  color: rgba(var(--vs-primary), 1) !important;
+  opacity: 1 !important;
+}
+.vs-sidebar-secondary .vs-sidebar--item a:hover {
+  color: rgba(var(--vs-secondary), 1);
+}
+.vs-sidebar-secondary .vs-sidebar-item-active {
+  font-weight: 700;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(transparent),
+    to(rgba(0, 0, 0, 0.01))
+  );
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.01));
+  border-right: 3px solid rgba(var(--vs-secondary), 1) !important;
+}
+.vuesax-app-is-rtl .vs-sidebar-secondary .vs-sidebar-item-active {
+  border-left: 3px solid rgba(var(--vs-secondary), 1) !important;
+}
+.vuesax-app-is-ltr .vs-sidebar-secondary .vs-sidebar-item-active {
+  border-right: 3px solid rgba(var(--vs-secondary), 1) !important;
+}
+.vs-sidebar-secondary .vs-sidebar-item-active a {
+  color: rgba(var(--vs-secondary), 1) !important;
+  opacity: 1 !important;
+}
+.vs-sidebar-danger .vs-sidebar--item a:hover {
+  color: rgba(var(--vs-danger), 1);
+}
+.vs-sidebar-danger .vs-sidebar-item-active {
+  font-weight: 700;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(transparent),
+    to(rgba(0, 0, 0, 0.01))
+  );
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.01));
+  border-right: 3px solid rgba(var(--vs-danger), 1) !important;
+}
+.vuesax-app-is-rtl .vs-sidebar-danger .vs-sidebar-item-active {
+  border-left: 3px solid rgba(var(--vs-danger), 1) !important;
+}
+.vuesax-app-is-ltr .vs-sidebar-danger .vs-sidebar-item-active {
+  border-right: 3px solid rgba(var(--vs-danger), 1) !important;
+}
+.vs-sidebar-danger .vs-sidebar-item-active a {
+  color: rgba(var(--vs-danger), 1) !important;
+  opacity: 1 !important;
+}
+.vs-sidebar-success .vs-sidebar--item a:hover {
+  color: rgba(var(--vs-success), 1);
+}
+.vs-sidebar-success .vs-sidebar-item-active {
+  font-weight: 700;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(transparent),
+    to(rgba(0, 0, 0, 0.01))
+  );
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.01));
+  border-right: 3px solid rgba(var(--vs-success), 1) !important;
+}
+.vuesax-app-is-rtl .vs-sidebar-success .vs-sidebar-item-active {
+  border-left: 3px solid rgba(var(--vs-success), 1) !important;
+}
+.vuesax-app-is-ltr .vs-sidebar-success .vs-sidebar-item-active {
+  border-right: 3px solid rgba(var(--vs-success), 1) !important;
+}
+.vs-sidebar-success .vs-sidebar-item-active a {
+  color: rgba(var(--vs-success), 1) !important;
+  opacity: 1 !important;
+}
+.vs-sidebar-warning .vs-sidebar--item a:hover {
+  color: rgba(var(--vs-warning), 1);
+}
+.vs-sidebar-warning .vs-sidebar-item-active {
+  font-weight: 700;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(transparent),
+    to(rgba(0, 0, 0, 0.01))
+  );
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.01));
+  border-right: 3px solid rgba(var(--vs-warning), 1) !important;
+}
+.vuesax-app-is-rtl .vs-sidebar-warning .vs-sidebar-item-active {
+  border-left: 3px solid rgba(var(--vs-warning), 1) !important;
+}
+.vuesax-app-is-ltr .vs-sidebar-warning .vs-sidebar-item-active {
+  border-right: 3px solid rgba(var(--vs-warning), 1) !important;
+}
+.vs-sidebar-warning .vs-sidebar-item-active a {
+  color: rgba(var(--vs-warning), 1) !important;
+  opacity: 1 !important;
+}
+.vs-sidebar-dark .vs-sidebar--item a:hover {
+  color: rgba(var(--vs-dark), 1);
+}
+.vs-sidebar-dark .vs-sidebar-item-active {
+  font-weight: 700;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(transparent),
+    to(rgba(0, 0, 0, 0.01))
+  );
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.01));
+  border-right: 3px solid rgba(var(--vs-dark), 1) !important;
+}
+.vuesax-app-is-rtl .vs-sidebar-dark .vs-sidebar-item-active {
+  border-left: 3px solid rgba(var(--vs-dark), 1) !important;
+}
+.vuesax-app-is-ltr .vs-sidebar-dark .vs-sidebar-item-active {
+  border-right: 3px solid rgba(var(--vs-dark), 1) !important;
+}
+.vs-sidebar-dark .vs-sidebar-item-active a {
+  color: rgba(var(--vs-dark), 1) !important;
+  opacity: 1 !important;
+}
+.vs-sidebar-light .vs-sidebar--item a:hover {
+  color: rgba(var(--vs-light), 1);
+}
+.vs-sidebar-light .vs-sidebar-item-active {
+  font-weight: 700;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(transparent),
+    to(rgba(0, 0, 0, 0.01))
+  );
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.01));
+  border-right: 3px solid rgba(var(--vs-light), 1) !important;
+}
+.vuesax-app-is-rtl .vs-sidebar-light .vs-sidebar-item-active {
+  border-left: 3px solid rgba(var(--vs-light), 1) !important;
+}
+.vuesax-app-is-ltr .vs-sidebar-light .vs-sidebar-item-active {
+  border-right: 3px solid rgba(var(--vs-light), 1) !important;
+}
+.vs-sidebar-light .vs-sidebar-item-active a {
+  color: rgba(var(--vs-light), 1) !important;
+  opacity: 1 !important;
+}
+.vs-sidebar-animate-enter-active,
+.vs-sidebar-animate-enter-active .vs-sidebar,
+.vs-sidebar-animate-leave-active,
+.vs-sidebar-animate-leave-active .vs-sidebar {
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.vuesax-app-is-rtl
+  .vs-sidebar-animate-enter:not(.vs-sidebar-position-right)
+  .vs-sidebar,
+.vuesax-app-is-rtl
+  .vs-sidebar-animate-leave-to:not(.vs-sidebar-position-right)
+  .vs-sidebar {
+  -webkit-transform: translate(100%);
+  transform: translate(100%);
+}
+.vuesax-app-is-ltr
+  .vs-sidebar-animate-enter:not(.vs-sidebar-position-right)
+  .vs-sidebar,
+.vuesax-app-is-ltr
+  .vs-sidebar-animate-leave-to:not(.vs-sidebar-position-right)
+  .vs-sidebar {
+  -webkit-transform: translate(-100%);
+  transform: translate(-100%);
+}
+.vs-sidebar-animate-enter .vs-sidebar-background,
+.vs-sidebar-animate-leave-to .vs-sidebar-background {
+  opacity: 0 !important;
+}
+.vuesax-app-is-rtl
+  .vs-sidebar-animate-enter
+  .vs-sidebar.vs-sidebar-position-right,
+.vuesax-app-is-rtl
+  .vs-sidebar-animate-leave-to
+  .vs-sidebar.vs-sidebar-position-right {
+  -webkit-transform: translate(-100%);
+  transform: translate(-100%);
+}
+.vuesax-app-is-ltr
+  .vs-sidebar-animate-enter
+  .vs-sidebar.vs-sidebar-position-right,
+.vuesax-app-is-ltr
+  .vs-sidebar-animate-leave-to
+  .vs-sidebar.vs-sidebar-position-right {
+  -webkit-transform: translate(100%);
+  transform: translate(100%);
+}
+@-webkit-keyframes expand {
+  0% {
+    max-width: 275px;
+  }
+  30% {
+    max-width: 250px;
+  }
+  60% {
+    max-width: 265px;
+  }
+  to {
+    max-width: 260px;
+  }
+}
+@keyframes expand {
+  0% {
+    max-width: 275px;
+  }
+  30% {
+    max-width: 250px;
+  }
+  60% {
+    max-width: 265px;
+  }
+  to {
+    max-width: 260px;
+  }
+}

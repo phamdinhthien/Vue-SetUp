@@ -1,0 +1,85 @@
+
+.vs-list {
+  width: 100%;
+  position: relative;
+  padding: 5px;
+}
+.vs-list--icon {
+  padding: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.vs-list--icon i {
+  font-size: 1.2rem !important;
+}
+.vs-list--header {
+  padding: 8px 0;
+  font-weight: 700;
+  -webkit-box-shadow: 0 7px 7px -5px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 7px 7px -5px rgba(0, 0, 0, 0.08);
+  margin-bottom: 5px;
+}
+.vs-list--header,
+.vs-list--item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+.vs-list--item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 5px;
+}
+.vs-list--item .vs-list--avatar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.vuesax-app-is-rtl .vs-list--slot {
+  margin-right: auto;
+}
+.vuesax-app-is-ltr .vs-list--slot {
+  margin-left: auto;
+}
+.vs-list--title {
+  font-weight: 700;
+}
+.vs-list--subtitle {
+  font-size: 0.8rem;
+}
+.vs-header-list-primary {
+  color: rgba(var(--vs-primary), 1);
+}
+.vs-header-list-secondary {
+  color: rgba(var(--vs-secondary), 1);
+}
+.vs-header-list-danger {
+  color: rgba(var(--vs-danger), 1);
+}
+.vs-header-list-success {
+  color: rgba(var(--vs-success), 1);
+}
+.vs-header-list-warning {
+  color: rgba(var(--vs-warning), 1);
+}
+.vs-header-list-dark {
+  color: rgba(var(--vs-dark), 1);
+}
+.vs-header-list-light {
+  color: rgba(var(--vs-light), 1);
+}

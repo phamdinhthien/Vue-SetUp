@@ -1,0 +1,153 @@
+
+.vs-switch {
+  border-radius: 12px;
+  border: 0;
+  min-width: 42px;
+  height: 22px;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.vs-switch:disabled {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+}
+.vs-switch:active:not(.vs-switch--circle) .vs-switch--circle {
+  width: 24px;
+  border-radius: 15px;
+}
+.vs-switch.vs-switch-active:active .vs-switch--circle {
+  width: 24px;
+  margin-left: calc(100% - 29px);
+}
+.vs-switch.vs-switch-active .vs-switch--circle {
+  margin-left: calc(100% - 22px);
+}
+.vs-switch--circle {
+  display: block;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  background: #fff;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+}
+.vs-switch--text {
+  position: absolute;
+  display: block;
+  font-size: 0.625em;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.vs-switch--text.text-on {
+  padding-left: 6px;
+  left: 0;
+  color: #fff;
+  -webkit-transform: translate(10px);
+  transform: translate(10px);
+}
+.vs-switch--text.text-off {
+  right: 0;
+  padding-right: 5px;
+  color: #a0a0a0;
+  -webkit-transform: translate(-10px);
+  transform: translate(-10px);
+}
+.vs-switch--text.active-text {
+  opacity: 1;
+  -webkit-transform: translate(0);
+  transform: translate(0);
+}
+.vs-switch--icon {
+  font-size: 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow: hidden;
+  max-width: 16px;
+  padding: 0 2px;
+}
+.vs-switch--input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+  opacity: 0;
+  cursor: pointer;
+}
+.vs-switch-primary {
+  background: #e2e2e2;
+}
+.vs-switch-primary.vs-switch-active {
+  background: rgba(var(--vs-primary), 1);
+}
+.vs-switch-secondary {
+  background: #e2e2e2;
+}
+.vs-switch-secondary.vs-switch-active {
+  background: rgba(var(--vs-secondary), 1);
+}
+.vs-switch-danger {
+  background: #e2e2e2;
+}
+.vs-switch-danger.vs-switch-active {
+  background: rgba(var(--vs-danger), 1);
+}
+.vs-switch-success {
+  background: #e2e2e2;
+}
+.vs-switch-success.vs-switch-active {
+  background: rgba(var(--vs-success), 1);
+}
+.vs-switch-warning {
+  background: #e2e2e2;
+}
+.vs-switch-warning.vs-switch-active {
+  background: rgba(var(--vs-warning), 1);
+}
+.vs-switch-dark {
+  background: #e2e2e2;
+}
+.vs-switch-dark.vs-switch-active {
+  background: rgba(var(--vs-dark), 1);
+}
+.vs-switch-light {
+  background: #e2e2e2;
+}
+.vs-switch-light.vs-switch-active {
+  background: rgba(var(--vs-light), 1);
+}

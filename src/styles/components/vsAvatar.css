@@ -1,0 +1,99 @@
+.con-vs-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  margin: 5px;
+}
+.con-vs-avatar.large {
+  width: 50px;
+  height: 50px;
+}
+.con-vs-avatar.small {
+  width: 24px;
+  height: 24px;
+}
+.con-vs-avatar.small .vs-avatar-text {
+  font-size: 0.9375em;
+}
+.vs-avatar--count {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  z-index: 100;
+}
+.vs-avatar--count.badgeNumber {
+  width: auto;
+  height: auto;
+  top: -3px;
+  right: 0;
+  border-radius: 4px;
+  padding-left: 3px;
+  padding-right: 3px;
+  font-size: 0.625em;
+  color: #fff;
+}
+.vs-avatar--text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.vs-avatar--con-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.vs-avatar--con-img img {
+  width: 100%;
+}
+.con-vs-avatar-primary {
+  background: rgba(var(--vs-primary), 1);
+}
+.vs-avatar-text-primary {
+  color: rgba(var(--vs-primary), 1);
+}
+.con-vs-avatar-secondary {
+  background: rgba(var(--vs-secondary), 1);
+}
+.vs-avatar-text-secondary {
+  color: rgba(var(--vs-secondary), 1);
+}
+.con-vs-avatar-danger {
+  background: rgba(var(--vs-danger), 1);
+}
+.vs-avatar-text-danger {
+  color: rgba(var(--vs-danger), 1);
+}
+.con-vs-avatar-success {
+  background: rgba(var(--vs-success), 1);
+}
+.vs-avatar-text-success {
+  color: rgba(var(--vs-success), 1);
+}
+.con-vs-avatar-warning {
+  background: rgba(var(--vs-warning), 1);
+}
+.vs-avatar-text-warning {
+  color: rgba(var(--vs-warning), 1);
+}
+.con-vs-avatar-dark {
+  background: rgba(var(--vs-dark), 1);
+}
+.vs-avatar-text-dark {
+  color: rgba(var(--vs-dark), 1);
+}
+.con-vs-avatar-light {
+  background: rgba(var(--vs-light), 1);
+}
+.vs-avatar-text-light {
+  color: rgba(var(--vs-light), 1);
+}

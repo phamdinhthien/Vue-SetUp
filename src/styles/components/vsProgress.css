@@ -1,0 +1,105 @@
+
+.vs-progress--indeterminate {
+  position: absolute;
+  width: 0;
+  height: 100%;
+  left: -100%;
+  top: 0;
+  border-radius: 2px;
+  -webkit-animation: indeterminate 1.2s ease infinite;
+  animation: indeterminate 1.2s ease infinite;
+  border-radius: 20px;
+}
+.vs-progress--background {
+  width: 100%;
+  border-radius: 18px;
+  background-color: rgba(0, 0, 0, 0.06);
+  z-index: 50;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+.vs-progress--foreground {
+  z-index: 100;
+  height: 100%;
+  border-radius: 18px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.vs-progress-primary {
+  background: rgba(var(--vs-primary), 0.1);
+}
+.vs-progress-primary .vs-progress--foreground,
+.vs-progress-primary .vs-progress--indeterminate {
+  background: rgba(var(--vs-primary), 1);
+}
+.vs-progress-secondary {
+  background: rgba(var(--vs-secondary), 0.1);
+}
+.vs-progress-secondary .vs-progress--foreground,
+.vs-progress-secondary .vs-progress--indeterminate {
+  background: rgba(var(--vs-secondary), 1);
+}
+.vs-progress-danger {
+  background: rgba(var(--vs-danger), 0.1);
+}
+.vs-progress-danger .vs-progress--foreground,
+.vs-progress-danger .vs-progress--indeterminate {
+  background: rgba(var(--vs-danger), 1);
+}
+.vs-progress-success {
+  background: rgba(var(--vs-success), 0.1);
+}
+.vs-progress-success .vs-progress--foreground,
+.vs-progress-success .vs-progress--indeterminate {
+  background: rgba(var(--vs-success), 1);
+}
+.vs-progress-warning {
+  background: rgba(var(--vs-warning), 0.1);
+}
+.vs-progress-warning .vs-progress--foreground,
+.vs-progress-warning .vs-progress--indeterminate {
+  background: rgba(var(--vs-warning), 1);
+}
+.vs-progress-dark {
+  background: rgba(var(--vs-dark), 0.1);
+}
+.vs-progress-dark .vs-progress--foreground,
+.vs-progress-dark .vs-progress--indeterminate {
+  background: rgba(var(--vs-dark), 1);
+}
+.vs-progress-light {
+  background: rgba(var(--vs-light), 0.1);
+}
+.vs-progress-light .vs-progress--foreground,
+.vs-progress-light .vs-progress--indeterminate {
+  background: rgba(var(--vs-light), 1);
+}
+@-webkit-keyframes indeterminate {
+  0% {
+    width: 30%;
+    left: -40%;
+  }
+  60% {
+    left: 100%;
+    width: 100%;
+  }
+  to {
+    left: 100%;
+    width: 0;
+  }
+}
+@keyframes indeterminate {
+  0% {
+    width: 30%;
+    left: -40%;
+  }
+  60% {
+    left: 100%;
+    width: 100%;
+  }
+  to {
+    left: 100%;
+    width: 0;
+  }
+}

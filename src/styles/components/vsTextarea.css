@@ -1,0 +1,103 @@
+
+.vs-con-textarea {
+  width: 100%;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0 0 0 0 transparent;
+  box-shadow: 0 0 0 0 transparent;
+  border-radius: 6px;
+  -webkit-transition: boxShadow 0.25s ease, border 0.25s ease,
+    -webkit-transform 0.25s ease;
+  transition: boxShadow 0.25s ease, border 0.25s ease,
+    -webkit-transform 0.25s ease;
+  transition: boxShadow 0.25s ease, border 0.25s ease, transform 0.25s ease;
+  transition: boxShadow 0.25s ease, border 0.25s ease, transform 0.25s ease,
+    -webkit-transform 0.25s ease;
+  -webkit-transform: translate(0);
+  transform: translate(0);
+  margin-bottom: 16px;
+}
+.vs-con-textarea.focusx h4 {
+  background: #fcfcfc;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.vs-con-textarea h4 {
+  font-size: 0.7rem;
+  padding: 8px;
+  padding-bottom: 0;
+  cursor: default;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  border-radius: 5px 5px 0 0;
+}
+.vs-textarea {
+  resize: none;
+  border-radius: 6px;
+  border: 0 solid transparent;
+  display: block;
+  padding: 9px;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 0.8rem;
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  background: transparent;
+}
+.vs-textarea:focus {
+  resize: auto !important;
+}
+.vs-textarea:focus ~ .count {
+  opacity: 1;
+}
+.textarea-danger {
+  border: 1px solid rgba(var(--vs-danger), 0.4);
+  -webkit-box-shadow: 0 4px 20px 0 rgba(var(--vs-danger), 0.1);
+  box-shadow: 0 4px 20px 0 rgba(var(--vs-danger), 0.1);
+}
+.textarea-danger .vs-textarea {
+  color: rgba(var(--vs-danger), 0.8);
+}
+.textarea-danger .count {
+  background: rgba(var(--vs-danger), 1);
+}
+.vs-textarea--count {
+  position: absolute;
+  right: 14px;
+  bottom: 0;
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  padding: 1px 6px;
+  font-size: 0.6rem;
+  border-radius: 0 0 5px 5px;
+  font-weight: 700;
+  -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05);
+  cursor: default;
+  background: rgba(var(--vs-primary), 1);
+  color: #fff;
+  opacity: 0.3;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.focusx.vs-textarea-primary {
+  border: 1px solid rgba(var(--vs-primary), 1) !important;
+}
+.focusx.vs-textarea-secondary {
+  border: 1px solid rgba(var(--vs-secondary), 1) !important;
+}
+.focusx.vs-textarea-danger {
+  border: 1px solid rgba(var(--vs-danger), 1) !important;
+}
+.focusx.vs-textarea-success {
+  border: 1px solid rgba(var(--vs-success), 1) !important;
+}
+.focusx.vs-textarea-warning {
+  border: 1px solid rgba(var(--vs-warning), 1) !important;
+}
+.focusx.vs-textarea-dark {
+  border: 1px solid rgba(var(--vs-dark), 1) !important;
+}
+.focusx.vs-textarea-light {
+  border: 1px solid rgba(var(--vs-light), 1) !important;
+}

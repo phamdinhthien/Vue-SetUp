@@ -1,0 +1,45 @@
+/*-----------------
+    Global Vars
+------------------*/
+
+
+/* fonts */
+
+$vs-font-family: arial !default;
+$vs-font-size: 1rem !default;
+$vs-color: 0 0 200 !default;
+
+/* disabled */
+
+$vs-disabled-opacity: 0.5 !default;
+$vs-disabled-pointer: default !default;
+
+/* transition */
+
+$vs-transition-duration: 0.25s !default;
+$vs-transition-delay: 0s !default;
+$vs-transition-timing: ease !default;
+
+/*----------------
+    COMPONETS
+-----------------*/
+
+/*vs-button*/
+
+$vs-button--padding-x: 10px !default;
+$vs-button--padding-y: 20px !default;
+$vs-button--border-radius: 5px !default;
+
+
+
+$vs-radio: 6px !default;
+$vs-disabled-opacity: 0.5 !default;
+$vs-transition: all 0.25s ease !default;
+$vs-border: 1px solid rgba(0, 0, 0, 0.1) !default;
+$vs-label-color: rgba(0, 0, 0, 0.6) !default;
+$vs-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.05) !default;
+$vs-background: rgb(255, 255, 255) !default;
+
+
+
+$border-color: rgb(255, 255, 255) !default;

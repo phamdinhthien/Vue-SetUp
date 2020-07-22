@@ -1,0 +1,284 @@
+
+.con-vs-slider {
+  width: 100%;
+  position: relative;
+  left: 0;
+  margin: 16px 0;
+  display: block;
+  min-width: 300px;
+  z-index: 100;
+}
+.con-vs-slider.disabledx {
+  opacity: 0.4;
+  cursor: default;
+}
+.con-vs-slider.disabledx button {
+  cursor: default !important;
+  pointer-events: none;
+}
+.vs-slider {
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background: #f0f0f0;
+  position: relative;
+  cursor: pointer;
+  border: 0;
+  margin: 0;
+  display: block;
+  overflow: hidden;
+}
+.vs-slider-line-one {
+  width: 20px;
+  height: 100%;
+  top: 0;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+}
+.vs-slider-line-one.hasTransition {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.vs-slider-line-efect {
+  width: 0;
+  height: 100%;
+  top: 0;
+  position: absolute;
+  left: 0;
+  -webkit-transition: opacity 0.3s ease, width 0.3s ease;
+  transition: opacity 0.3s ease, width 0.3s ease;
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%);
+}
+.vs-slider-line-efect:not(.run-effect) {
+  opacity: 0 !important;
+  width: 0 !important;
+}
+.vs-slider-line-efect.run-effect {
+  width: 100%;
+  -webkit-animation: example 0.3s ease;
+  animation: example 0.3s ease;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+.vs-slider--tick {
+  position: absolute;
+  left: 100px;
+  background: #d2d2d2;
+  width: 4px;
+  height: 100%;
+  top: 0;
+}
+.vs-slider--tick.isEnd {
+  -webkit-transform: translate(-100%);
+  transform: translate(-100%);
+}
+.vs-slider--circles {
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%);
+  -webkit-transition: border 0.2s ease, border-radius 0.2s ease,
+    -webkit-transform 0.2s ease;
+  transition: border 0.2s ease, border-radius 0.2s ease,
+    -webkit-transform 0.2s ease;
+  transition: border 0.2s ease, transform 0.2s ease, border-radius 0.2s ease;
+  transition: border 0.2s ease, transform 0.2s ease, border-radius 0.2s ease,
+    -webkit-transform 0.2s ease;
+  display: block;
+  background: #fff;
+}
+.vs-slider--circles:active {
+  border-width: 7px !important;
+}
+.vs-slider--circles.isEquals.vs-circle-slider-two {
+  border-radius: 50% 50% 0 0;
+  -webkit-transform: translate(-50%, -7px) scale(0.9) !important;
+  transform: translate(-50%, -7px) scale(0.9) !important;
+}
+.vs-slider--circles.isEquals.vs-circle-slider {
+  border-radius: 0 0 50% 50%;
+  -webkit-transform: translate(-50%, 6px) scale(0.9) !important;
+  transform: translate(-50%, 6px) scale(0.9) !important;
+}
+.vs-slider--circles.changeValue:active {
+  border-width: 6px !important;
+}
+.vs-slider--circles.changeValue:active .text-circle-slider {
+  -webkit-transform: translate(-50%, calc(-100% + -19px)) !important;
+  transform: translate(-50%, calc(-100% + -19px)) !important;
+}
+.vs-slider--circles.isEndValue {
+  border-radius: 50% 0 0 50% !important;
+}
+.vs-slider--circles:hover:not(:active) {
+  -webkit-transform: scale(1.2) translate(-50%);
+  transform: scale(1.2) translate(-50%);
+}
+.vs-slider--circles:active .text-circle-slider {
+  opacity: 1;
+  -webkit-transform: translate(-50%, calc(-100% + -13px)) scale(1) rotate(0deg);
+  transform: translate(-50%, calc(-100% + -13px)) scale(1) rotate(0deg);
+  visibility: visible;
+}
+.vs-slider--circle-text {
+  color: #fff;
+  position: absolute;
+  padding: 2px 5px;
+  display: block;
+  border-radius: 5px;
+  -webkit-transform: translate(-50%, -20%) scale(0.3);
+  transform: translate(-50%, -20%) scale(0.3);
+  top: 0;
+  left: 50%;
+  font-size: 0.75rem;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.vs-slider--circle-text span {
+  margin-left: 2px;
+}
+.vs-slider--circle-text i {
+  font-size: 0.8rem;
+  margin-left: 2px;
+}
+.vs-slider--circle-text:after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  display: block;
+  position: absolute;
+  background: inherit;
+  left: 50%;
+  bottom: -3px;
+  -webkit-transform: translate(-50%) rotate(45deg);
+  transform: translate(-50%) rotate(45deg);
+}
+.vs-slider--circle {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: -6px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 0;
+  margin: 0;
+  z-index: 200;
+}
+.vs-slider--circle.hasTransition {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.vs-slider--circle-two {
+  z-index: 100;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: -6px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 0;
+  margin: 0;
+  color: #fff;
+}
+.vs-slider--circle-two.hasTransition {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.vs-slider-primary .vs-slider-line-one {
+  background: rgba(var(--vs-primary), 1);
+}
+.vs-slider-primary .vs-circles-slider {
+  border: 2px solid rgba(var(--vs-primary), 1);
+}
+.vs-slider-primary .text-circle-slider,
+.vs-slider-primary .vs-slider-line-efect {
+  background: rgba(var(--vs-primary), 1);
+}
+.vs-slider-secondary .vs-slider-line-one {
+  background: rgba(var(--vs-secondary), 1);
+}
+.vs-slider-secondary .vs-circles-slider {
+  border: 2px solid rgba(var(--vs-secondary), 1);
+}
+.vs-slider-secondary .text-circle-slider,
+.vs-slider-secondary .vs-slider-line-efect {
+  background: rgba(var(--vs-secondary), 1);
+}
+.vs-slider-danger .vs-slider-line-one {
+  background: rgba(var(--vs-danger), 1);
+}
+.vs-slider-danger .vs-circles-slider {
+  border: 2px solid rgba(var(--vs-danger), 1);
+}
+.vs-slider-danger .text-circle-slider,
+.vs-slider-danger .vs-slider-line-efect {
+  background: rgba(var(--vs-danger), 1);
+}
+.vs-slider-success .vs-slider-line-one {
+  background: rgba(var(--vs-success), 1);
+}
+.vs-slider-success .vs-circles-slider {
+  border: 2px solid rgba(var(--vs-success), 1);
+}
+.vs-slider-success .text-circle-slider,
+.vs-slider-success .vs-slider-line-efect {
+  background: rgba(var(--vs-success), 1);
+}
+.vs-slider-warning .vs-slider-line-one {
+  background: rgba(var(--vs-warning), 1);
+}
+.vs-slider-warning .vs-circles-slider {
+  border: 2px solid rgba(var(--vs-warning), 1);
+}
+.vs-slider-warning .text-circle-slider,
+.vs-slider-warning .vs-slider-line-efect {
+  background: rgba(var(--vs-warning), 1);
+}
+.vs-slider-dark .vs-slider-line-one {
+  background: rgba(var(--vs-dark), 1);
+}
+.vs-slider-dark .vs-circles-slider {
+  border: 2px solid rgba(var(--vs-dark), 1);
+}
+.vs-slider-dark .text-circle-slider,
+.vs-slider-dark .vs-slider-line-efect {
+  background: rgba(var(--vs-dark), 1);
+}
+.vs-slider-light .vs-slider-line-one {
+  background: rgba(var(--vs-light), 1);
+}
+.vs-slider-light .vs-circles-slider {
+  border: 2px solid rgba(var(--vs-light), 1);
+}
+.vs-slider-light .text-circle-slider,
+.vs-slider-light .vs-slider-line-efect {
+  background: rgba(var(--vs-light), 1);
+}
+@-webkit-keyframes example {
+  0% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes example {
+  0% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

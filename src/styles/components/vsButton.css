@@ -1,0 +1,505 @@
+
+.vs-button {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  padding: 10px;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background: transparent;
+}
+.vs-button.vs-radius {
+  border-radius: 50%;
+}
+.vs-button.large {
+  padding: 12px;
+  font-size: 1em;
+}
+.vs-button.small {
+  padding: 7px;
+  font-size: 0.7em;
+}
+.vs-button:disabled {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+}
+.vs-button--icon {
+  z-index: 100;
+  display: block;
+  position: relative;
+  font-size: 1.125em;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.vs-button--background {
+  border-radius: 50%;
+  width: 10px;
+  position: absolute;
+  height: 10px;
+  z-index: 0;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-box-shadow: inset 0 0 60px 0 hsla(0, 0%, 100%, 0.5);
+  box-shadow: inset 0 0 60px 0 hsla(0, 0%, 100%, 0.5);
+}
+.vs-button--text {
+  position: relative;
+  color: inherit;
+  display: inline-block;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.vs-button-border {
+  padding: 9px;
+}
+.vs-button-border.isActive .vs-button--icon,
+.vs-button-border.isActive .vs-button--text,
+.vs-button-flat.isActive .vs-button--icon,
+.vs-button-flat.isActive .vs-button--text {
+  color: #fff !important;
+}
+.vs-button-filled:hover {
+  -webkit-box-shadow: 0 9px 28px -9px;
+  box-shadow: 0 9px 28px -9px;
+}
+.vs-button-line {
+  padding: 9px 10px;
+  border-radius: 0;
+  overflow: visible;
+  border-style: solid;
+}
+.vs-button-line .vs-button-linex {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  width: 0;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+}
+.vs-button-line:hover .vs-button--icon,
+.vs-button-line:hover .vs-button--text {
+  -webkit-transform: translateY(2px);
+  transform: translateY(2px);
+}
+.vs-button-line:hover .vs-button-linex {
+  width: 100% !important;
+}
+.vs-button-gradient:hover {
+  -webkit-transform: translateY(-2px);
+  transform: translateY(-2px);
+  -webkit-box-shadow: 0 8px 25px -8px #aaa;
+  box-shadow: 0 8px 25px -8px #aaa;
+}
+.vs-button-gradient:active {
+  -webkit-transform: translate(0);
+  transform: translate(0);
+  -webkit-box-shadow: 0 8px 0 -8px #aaa;
+  box-shadow: 0 8px 0 -8px #aaa;
+}
+.vs-button-relief {
+  padding: 10px;
+}
+.vs-button-relief:active {
+  -webkit-transform: translateY(3px);
+  transform: translateY(3px);
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+.includeIcon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.vuesax-app-is-rtl .includeIcon {
+  float: right;
+}
+.vuesax-app-is-ltr .includeIcon {
+  float: left;
+}
+.includeIconOnly {
+  width: 38px !important;
+  height: 38px !important;
+}
+.includeIconOnly.large {
+  width: 44px !important;
+  height: 44px !important;
+  font-size: 0.7em;
+}
+.includeIconOnly.small {
+  width: 28px !important;
+  height: 28px !important;
+}
+.includeIconOnly.small .vs-icon {
+  font-size: 0.85rem;
+}
+.vs-button-primary.vs-button-filled {
+  background: rgba(var(--vs-primary), 1) !important;
+}
+.vs-button-primary.vs-button-filled:hover {
+  -webkit-box-shadow: 0 8px 25px -8px rgba(var(--vs-primary), 1);
+  box-shadow: 0 8px 25px -8px rgba(var(--vs-primary), 1);
+}
+.vs-button-primary.vs-button-border,
+.vs-button-primary.vs-button-flat {
+  border: 1px solid rgba(var(--vs-primary), 1);
+  background: transparent !important;
+  color: rgba(var(--vs-primary), 1);
+}
+.vs-button-primary.vs-button-border .vs-button--text.isActive,
+.vs-button-primary.vs-button-flat .vs-button--text.isActive {
+  color: #fff !important;
+}
+.vs-button-primary.vs-button-border:hover,
+.vs-button-primary.vs-button-flat:hover {
+  background: rgba(var(--vs-primary), 0.08) !important;
+}
+.vs-button-primary.vs-button-border .vs-button-backgroundx,
+.vs-button-primary.vs-button-flat .vs-button-backgroundx {
+  background: rgba(var(--vs-primary), 1);
+  -webkit-box-shadow: inset 0 0 60px 0 rgba(var(--vs-primary), 1);
+  box-shadow: inset 0 0 60px 0 rgba(var(--vs-primary), 1);
+}
+.vs-button-primary.vs-button-flat {
+  border: none !important;
+}
+.vs-button-primary.vs-button-line {
+  color: rgba(var(--vs-primary), 1);
+  border-color: rgba(var(--vs-primary), 0.2);
+}
+.vs-button-primary.vs-button-line .vs-button-linex {
+  background: rgba(var(--vs-primary), 1);
+}
+.vs-button-primary.vs-button-gradient {
+  background: #640064;
+  background-image: linear-gradient(
+    30deg,
+    rgba(var(--vs-primary), 1),
+    rgba(var(--vs-primary), 0.5)
+  ) !important;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.vs-button-primary.vs-button-relief {
+  background: rgba(var(--vs-primary), 1);
+  -webkit-box-shadow: 0 -3px 0 0 rgba(0, 0, 0, 0.2) inset;
+  box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.2);
+}
+.vs-button-secondary.vs-button-filled {
+  background: rgba(var(--vs-secondary), 1) !important;
+}
+.vs-button-secondary.vs-button-filled:hover {
+  -webkit-box-shadow: 0 8px 25px -8px rgba(var(--vs-secondary), 1);
+  box-shadow: 0 8px 25px -8px rgba(var(--vs-secondary), 1);
+}
+.vs-button-secondary.vs-button-border,
+.vs-button-secondary.vs-button-flat {
+  border: 1px solid rgba(var(--vs-secondary), 1);
+  background: transparent !important;
+  color: rgba(var(--vs-secondary), 1);
+}
+.vs-button-secondary.vs-button-border .vs-button--text.isActive,
+.vs-button-secondary.vs-button-flat .vs-button--text.isActive {
+  color: #fff !important;
+}
+.vs-button-secondary.vs-button-border:hover,
+.vs-button-secondary.vs-button-flat:hover {
+  background: rgba(var(--vs-secondary), 0.08) !important;
+}
+.vs-button-secondary.vs-button-border .vs-button-backgroundx,
+.vs-button-secondary.vs-button-flat .vs-button-backgroundx {
+  background: rgba(var(--vs-secondary), 1);
+  -webkit-box-shadow: inset 0 0 60px 0 rgba(var(--vs-secondary), 1);
+  box-shadow: inset 0 0 60px 0 rgba(var(--vs-secondary), 1);
+}
+.vs-button-secondary.vs-button-flat {
+  border: none !important;
+}
+.vs-button-secondary.vs-button-line {
+  color: rgba(var(--vs-secondary), 1);
+  border-color: rgba(var(--vs-secondary), 0.2);
+}
+.vs-button-secondary.vs-button-line .vs-button-linex {
+  background: rgba(var(--vs-secondary), 1);
+}
+.vs-button-secondary.vs-button-gradient {
+  background: #640064;
+  background-image: linear-gradient(
+    30deg,
+    rgba(var(--vs-secondary), 1),
+    rgba(var(--vs-secondary), 0.5)
+  ) !important;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.vs-button-secondary.vs-button-relief {
+  background: rgba(var(--vs-secondary), 1);
+  -webkit-box-shadow: 0 -3px 0 0 rgba(0, 0, 0, 0.2) inset;
+  box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.2);
+}
+.vs-button-danger.vs-button-filled {
+  background: rgba(var(--vs-danger), 1) !important;
+}
+.vs-button-danger.vs-button-filled:hover {
+  -webkit-box-shadow: 0 8px 25px -8px rgba(var(--vs-danger), 1);
+  box-shadow: 0 8px 25px -8px rgba(var(--vs-danger), 1);
+}
+.vs-button-danger.vs-button-border,
+.vs-button-danger.vs-button-flat {
+  border: 1px solid rgba(var(--vs-danger), 1);
+  background: transparent !important;
+  color: rgba(var(--vs-danger), 1);
+}
+.vs-button-danger.vs-button-border .vs-button--text.isActive,
+.vs-button-danger.vs-button-flat .vs-button--text.isActive {
+  color: #fff !important;
+}
+.vs-button-danger.vs-button-border:hover,
+.vs-button-danger.vs-button-flat:hover {
+  background: rgba(var(--vs-danger), 0.08) !important;
+}
+.vs-button-danger.vs-button-border .vs-button-backgroundx,
+.vs-button-danger.vs-button-flat .vs-button-backgroundx {
+  background: rgba(var(--vs-danger), 1);
+  -webkit-box-shadow: inset 0 0 60px 0 rgba(var(--vs-danger), 1);
+  box-shadow: inset 0 0 60px 0 rgba(var(--vs-danger), 1);
+}
+.vs-button-danger.vs-button-flat {
+  border: none !important;
+}
+.vs-button-danger.vs-button-line {
+  color: rgba(var(--vs-danger), 1);
+  border-color: rgba(var(--vs-danger), 0.2);
+}
+.vs-button-danger.vs-button-line .vs-button-linex {
+  background: rgba(var(--vs-danger), 1);
+}
+.vs-button-danger.vs-button-gradient {
+  background: #640064;
+  background-image: linear-gradient(
+    30deg,
+    rgba(var(--vs-danger), 1),
+    rgba(var(--vs-danger), 0.5)
+  ) !important;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.vs-button-danger.vs-button-relief {
+  background: rgba(var(--vs-danger), 1);
+  -webkit-box-shadow: 0 -3px 0 0 rgba(0, 0, 0, 0.2) inset;
+  box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.2);
+}
+.vs-button-success.vs-button-filled {
+  background: rgba(var(--vs-success), 1) !important;
+}
+.vs-button-success.vs-button-filled:hover {
+  -webkit-box-shadow: 0 8px 25px -8px rgba(var(--vs-success), 1);
+  box-shadow: 0 8px 25px -8px rgba(var(--vs-success), 1);
+}
+.vs-button-success.vs-button-border,
+.vs-button-success.vs-button-flat {
+  border: 1px solid rgba(var(--vs-success), 1);
+  background: transparent !important;
+  color: rgba(var(--vs-success), 1);
+}
+.vs-button-success.vs-button-border .vs-button--text.isActive,
+.vs-button-success.vs-button-flat .vs-button--text.isActive {
+  color: #fff !important;
+}
+.vs-button-success.vs-button-border:hover,
+.vs-button-success.vs-button-flat:hover {
+  background: rgba(var(--vs-success), 0.08) !important;
+}
+.vs-button-success.vs-button-border .vs-button-backgroundx,
+.vs-button-success.vs-button-flat .vs-button-backgroundx {
+  background: rgba(var(--vs-success), 1);
+  -webkit-box-shadow: inset 0 0 60px 0 rgba(var(--vs-success), 1);
+  box-shadow: inset 0 0 60px 0 rgba(var(--vs-success), 1);
+}
+.vs-button-success.vs-button-flat {
+  border: none !important;
+}
+.vs-button-success.vs-button-line {
+  color: rgba(var(--vs-success), 1);
+  border-color: rgba(var(--vs-success), 0.2);
+}
+.vs-button-success.vs-button-line .vs-button-linex {
+  background: rgba(var(--vs-success), 1);
+}
+.vs-button-success.vs-button-gradient {
+  background: #0064fa;
+  background-image: linear-gradient(
+    30deg,
+    rgba(var(--vs-success), 1),
+    rgba(var(--vs-success), 0.6)
+  ) !important;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.vs-button-success.vs-button-relief {
+  background: rgba(var(--vs-success), 1);
+  -webkit-box-shadow: 0 -3px 0 0 rgba(0, 0, 0, 0.2) inset;
+  box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.2);
+}
+.vs-button-warning.vs-button-filled {
+  background: rgba(var(--vs-warning), 1) !important;
+}
+.vs-button-warning.vs-button-filled:hover {
+  -webkit-box-shadow: 0 8px 25px -8px rgba(var(--vs-warning), 1);
+  box-shadow: 0 8px 25px -8px rgba(var(--vs-warning), 1);
+}
+.vs-button-warning.vs-button-border,
+.vs-button-warning.vs-button-flat {
+  border: 1px solid rgba(var(--vs-warning), 1);
+  background: transparent !important;
+  color: rgba(var(--vs-warning), 1);
+}
+.vs-button-warning.vs-button-border .vs-button--text.isActive,
+.vs-button-warning.vs-button-flat .vs-button--text.isActive {
+  color: #fff !important;
+}
+.vs-button-warning.vs-button-border:hover,
+.vs-button-warning.vs-button-flat:hover {
+  background: rgba(var(--vs-warning), 0.08) !important;
+}
+.vs-button-warning.vs-button-border .vs-button-backgroundx,
+.vs-button-warning.vs-button-flat .vs-button-backgroundx {
+  background: rgba(var(--vs-warning), 1);
+  -webkit-box-shadow: inset 0 0 60px 0 rgba(var(--vs-warning), 1);
+  box-shadow: inset 0 0 60px 0 rgba(var(--vs-warning), 1);
+}
+.vs-button-warning.vs-button-flat {
+  border: none !important;
+}
+.vs-button-warning.vs-button-line {
+  color: rgba(var(--vs-warning), 1);
+  border-color: rgba(var(--vs-warning), 0.2);
+}
+.vs-button-warning.vs-button-line .vs-button-linex {
+  background: rgba(var(--vs-warning), 1);
+}
+.vs-button-warning.vs-button-gradient {
+  background: #fafafa;
+  background-image: linear-gradient(
+    30deg,
+    rgba(var(--vs-warning), 1),
+    rgba(var(--vs-warning), 0.5)
+  ) !important;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.vs-button-warning.vs-button-relief {
+  background: rgba(var(--vs-warning), 1);
+  -webkit-box-shadow: 0 -3px 0 0 rgba(0, 0, 0, 0.2) inset;
+  box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.2);
+}
+.vs-button-dark.vs-button-filled {
+  background: rgba(var(--vs-dark), 1) !important;
+}
+.vs-button-dark.vs-button-filled:hover {
+  -webkit-box-shadow: 0 8px 25px -8px rgba(var(--vs-dark), 1);
+  box-shadow: 0 8px 25px -8px rgba(var(--vs-dark), 1);
+}
+.vs-button-dark.vs-button-border,
+.vs-button-dark.vs-button-flat {
+  border: 1px solid rgba(var(--vs-dark), 1);
+  background: transparent !important;
+  color: rgba(var(--vs-dark), 1);
+}
+.vs-button-dark.vs-button-border .vs-button--text.isActive,
+.vs-button-dark.vs-button-flat .vs-button--text.isActive {
+  color: #fff !important;
+}
+.vs-button-dark.vs-button-border:hover,
+.vs-button-dark.vs-button-flat:hover {
+  background: rgba(var(--vs-dark), 0.08) !important;
+}
+.vs-button-dark.vs-button-border .vs-button-backgroundx,
+.vs-button-dark.vs-button-flat .vs-button-backgroundx {
+  background: rgba(var(--vs-dark), 1);
+  -webkit-box-shadow: inset 0 0 60px 0 rgba(var(--vs-dark), 1);
+  box-shadow: inset 0 0 60px 0 rgba(var(--vs-dark), 1);
+}
+.vs-button-dark.vs-button-flat {
+  border: none !important;
+}
+.vs-button-dark.vs-button-line {
+  color: rgba(var(--vs-dark), 1);
+  border-color: rgba(var(--vs-dark), 0.2);
+}
+.vs-button-dark.vs-button-line .vs-button-linex {
+  background: rgba(var(--vs-dark), 1);
+}
+.vs-button-dark.vs-button-gradient {
+  background: #640064;
+  background-image: linear-gradient(
+    30deg,
+    rgba(var(--vs-dark), 1),
+    rgba(var(--vs-dark), 0.5)
+  ) !important;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.vs-button-dark.vs-button-relief {
+  background: rgba(var(--vs-dark), 1);
+  -webkit-box-shadow: 0 -3px 0 0 hsla(0, 0%, 100%, 0.1) inset;
+  box-shadow: inset 0 -3px 0 0 hsla(0, 0%, 100%, 0.1);
+}
+.vs-button-light.vs-button-filled {
+  background: rgba(var(--vs-light), 1) !important;
+}
+.vs-button-light.vs-button-filled:hover {
+  -webkit-box-shadow: 0 8px 25px -8px rgba(var(--vs-light), 1);
+  box-shadow: 0 8px 25px -8px rgba(var(--vs-light), 1);
+}
+.vs-button-light.vs-button-border,
+.vs-button-light.vs-button-flat {
+  border: 1px solid rgba(var(--vs-light), 1);
+  background: transparent !important;
+  color: rgba(var(--vs-light), 1);
+}
+.vs-button-light.vs-button-border .vs-button--text.isActive,
+.vs-button-light.vs-button-flat .vs-button--text.isActive {
+  color: #fff !important;
+}
+.vs-button-light.vs-button-border:hover,
+.vs-button-light.vs-button-flat:hover {
+  background: rgba(var(--vs-light), 0.08) !important;
+}
+.vs-button-light.vs-button-border .vs-button-backgroundx,
+.vs-button-light.vs-button-flat .vs-button-backgroundx {
+  background: rgba(var(--vs-light), 1);
+  -webkit-box-shadow: inset 0 0 60px 0 rgba(var(--vs-light), 1);
+  box-shadow: inset 0 0 60px 0 rgba(var(--vs-light), 1);
+}
+.vs-button-light.vs-button-flat {
+  border: none !important;
+}
+.vs-button-light.vs-button-line {
+  color: rgba(var(--vs-light), 1);
+  border-color: rgba(var(--vs-light), 0.2);
+}
+.vs-button-light.vs-button-line .vs-button-linex {
+  background: rgba(var(--vs-light), 1);
+}
+.vs-button-light.vs-button-gradient {
+  background: #640064;
+  background-image: linear-gradient(
+    30deg,
+    rgba(var(--vs-light), 1),
+    rgba(var(--vs-light), 0.5)
+  ) !important;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.vs-button-light.vs-button-relief {
+  background: rgba(var(--vs-light), 1);
+  -webkit-box-shadow: 0 -3px 0 0 rgba(0, 0, 0, 0.2) inset;
+  box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.2);
+}

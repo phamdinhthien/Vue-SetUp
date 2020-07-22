@@ -1,0 +1,72 @@
+
+.con-vs-card {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: block;
+  -webkit-box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.con-vs-card.withHover {
+  cursor: pointer;
+}
+.con-vs-card.withHover:hover {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+}
+.con-vs-card.withHover:hover img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.con-vs-card.fixedHeight {
+  height: 100%;
+  position: relative;
+}
+.vs-card--header {
+  padding: 10px;
+  -webkit-box-shadow: 0 10px 15px -10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 15px -10px rgba(0, 0, 0, 0.05);
+}
+.vs-card--header h3 {
+  padding: 0;
+}
+.vs-card--footer {
+  position: relative;
+  padding: 10px;
+  -webkit-transform: translateY(40%);
+  transform: translateY(40%);
+  margin-top: -5%;
+  padding-top: 0;
+}
+.vs-card--footer.fixedHeight {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-top: 0;
+  -webkit-transform: translate(0);
+  transform: translate(0);
+}
+.vs-card--content {
+  padding: 10px;
+  font-size: 0.8rem;
+  margin-bottom: 15px;
+}
+.vs-card--content.fixedHeight {
+  margin-bottom: 20px;
+}
+.vs-card--media {
+  width: 100%;
+  overflow: hidden;
+}
+.vs-card--media img {
+  width: 100%;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  display: block;
+}

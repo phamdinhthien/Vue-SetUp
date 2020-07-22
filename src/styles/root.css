@@ -1,0 +1,24 @@
+:root {
+  --vs-primary: 31, 116, 255;
+  --vs-danger: 255, 71, 87;
+  --vs-success: 70, 201, 58;
+  --vs-dark: 30, 30, 30;
+  --vs-warning: 255, 186, 0;
+  --vs-light: 245, 245, 245;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  text-transform: none;
+  text-decoration: none;
+}
+.vuesax-app-is-rtl {
+  direction: rtl;
+}
+.vuesax-app-is-ltr {
+  direction: ltr;
+}

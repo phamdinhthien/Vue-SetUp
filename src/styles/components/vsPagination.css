@@ -1,0 +1,263 @@
+
+.con-vs-pagination {
+  --color-pagination: #f0f0f0;
+  --color-pagination-alpha: #f0f0f0;
+}
+.vs-pagination--input-goto {
+  color: inherit;
+  padding: 8px;
+  border-radius: 5px;
+  border: 0 solid rgba(0, 0, 0, 0.2);
+  background: #f0f0f0;
+}
+.vuesax-app-is-rtl .vs-pagination--input-goto {
+  margin-right: 5px;
+}
+.vuesax-app-is-ltr .vs-pagination--input-goto {
+  margin-left: 5px;
+}
+.vs-pagination--nav,
+.vs-pagination--ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.vs-pagination--ul {
+  padding: 0;
+  background: #f0f0f0;
+  border-radius: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.vs-pagination--array {
+  display: inline-block;
+  padding: 0;
+}
+.vs-pagination--array li {
+  display: inline-block;
+}
+.vs-pagination--mb {
+  margin-bottom: 5px;
+}
+.vs-pagination--bold {
+  font-weight: 700;
+}
+.vs-pagination--li {
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 8px;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  position: relative;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+  margin: 0 2px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.5);
+}
+.vs-pagination--li span {
+  z-index: 100;
+}
+.vs-pagination--li .effect {
+  z-index: 50;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--vs-color-pagination);
+  top: 0;
+  display: block;
+  border-radius: 8px;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  opacity: 0;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  -webkit-box-shadow: 0 0 20px 0 transparent;
+  box-shadow: 0 0 20px 0 transparent;
+}
+.vuesax-app-is-rtl .vs-pagination--li .effect {
+  right: 0;
+}
+.vuesax-app-is-ltr .vs-pagination--li .effect {
+  left: 0;
+}
+.vs-pagination--li.is-current {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  color: #fff;
+  font-weight: 700;
+  cursor: default;
+  background: var(--vs-color-pagination);
+}
+.vs-pagination--li.is-current .effect {
+  opacity: 1;
+  -webkit-transform: scale(1) !important;
+  transform: scale(1) !important;
+  -webkit-box-shadow: 0 0 20px 0 var(--vs-color-pagination-alpha);
+  box-shadow: 0 0 20px 0 var(--vs-color-pagination-alpha);
+}
+.vs-pagination--li:hover:not(.is-current) {
+  color: var(--vs-color-pagination);
+}
+.vs-pagination--buttons {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 0;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  color: rgba(0, 0, 0, 0.6);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  background: #f0f0f0;
+  margin: 0;
+  z-index: 200;
+}
+.vuesax-app-is-rtl .vs-pagination--buttons.vs-pagination--button-prev {
+  margin-left: 5px;
+}
+.vuesax-app-is-ltr .vs-pagination--buttons.vs-pagination--button-prev,
+.vuesax-app-is-rtl .vs-pagination--buttons.vs-pagination--button-next {
+  margin-right: 5px;
+}
+.vuesax-app-is-ltr .vs-pagination--buttons.vs-pagination--button-next {
+  margin-left: 5px;
+}
+.vs-pagination--buttons.disabled,
+.vs-pagination--buttons:disabled {
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.5;
+}
+.vs-pagination--buttons i {
+  font-size: 1.2rem;
+}
+.vs-pagination--buttons:hover {
+  background: var(--vs-color-pagination);
+  color: #fff;
+}
+.vs-pagination-primary li:hover:not(.is-current) {
+  color: rgba(var(--vs-primary), 1) !important;
+}
+.vs-pagination-primary .effect {
+  -webkit-box-shadow: 0 0 20px 0 rgba(var(--vs-primary), 0.5);
+  box-shadow: 0 0 20px 0 rgba(var(--vs-primary), 0.5);
+}
+.vs-pagination-primary .effect,
+.vs-pagination-primary .vs-pagination--buttons:hover {
+  background: rgba(var(--vs-primary), 1) !important;
+}
+.vs-pagination-secondary li:hover:not(.is-current) {
+  color: rgba(var(--vs-secondary), 1) !important;
+}
+.vs-pagination-secondary .effect {
+  -webkit-box-shadow: 0 0 20px 0 rgba(var(--vs-secondary), 0.5);
+  box-shadow: 0 0 20px 0 rgba(var(--vs-secondary), 0.5);
+}
+.vs-pagination-secondary .effect,
+.vs-pagination-secondary .vs-pagination--buttons:hover {
+  background: rgba(var(--vs-secondary), 1) !important;
+}
+.vs-pagination-danger li:hover:not(.is-current) {
+  color: rgba(var(--vs-danger), 1) !important;
+}
+.vs-pagination-danger .effect {
+  -webkit-box-shadow: 0 0 20px 0 rgba(var(--vs-danger), 0.5);
+  box-shadow: 0 0 20px 0 rgba(var(--vs-danger), 0.5);
+}
+.vs-pagination-danger .effect,
+.vs-pagination-danger .vs-pagination--buttons:hover {
+  background: rgba(var(--vs-danger), 1) !important;
+}
+.vs-pagination-success li:hover:not(.is-current) {
+  color: rgba(var(--vs-success), 1) !important;
+}
+.vs-pagination-success .effect {
+  -webkit-box-shadow: 0 0 20px 0 rgba(var(--vs-success), 0.5);
+  box-shadow: 0 0 20px 0 rgba(var(--vs-success), 0.5);
+}
+.vs-pagination-success .effect,
+.vs-pagination-success .vs-pagination--buttons:hover {
+  background: rgba(var(--vs-success), 1) !important;
+}
+.vs-pagination-warning li:hover:not(.is-current) {
+  color: rgba(var(--vs-warning), 1) !important;
+}
+.vs-pagination-warning .effect {
+  -webkit-box-shadow: 0 0 20px 0 rgba(var(--vs-warning), 0.5);
+  box-shadow: 0 0 20px 0 rgba(var(--vs-warning), 0.5);
+}
+.vs-pagination-warning .effect,
+.vs-pagination-warning .vs-pagination--buttons:hover {
+  background: rgba(var(--vs-warning), 1) !important;
+}
+.vs-pagination-dark li:hover:not(.is-current) {
+  color: rgba(var(--vs-dark), 1) !important;
+}
+.vs-pagination-dark .effect {
+  -webkit-box-shadow: 0 0 20px 0 rgba(var(--vs-dark), 0.5);
+  box-shadow: 0 0 20px 0 rgba(var(--vs-dark), 0.5);
+}
+.vs-pagination-dark .effect,
+.vs-pagination-dark .vs-pagination--buttons:hover {
+  background: rgba(var(--vs-dark), 1) !important;
+}
+.vs-pagination-light li:hover:not(.is-current) {
+  color: rgba(var(--vs-light), 1) !important;
+}
+.vs-pagination-light .effect {
+  -webkit-box-shadow: 0 0 20px 0 rgba(var(--vs-light), 0.5);
+  box-shadow: 0 0 20px 0 rgba(var(--vs-light), 0.5);
+}
+.vs-pagination-light .effect,
+.vs-pagination-light .vs-pagination--buttons:hover {
+  background: rgba(var(--vs-light), 1) !important;
+}
+.vs-description-primary {
+  color: rgba(var(--vs-primary), 1) !important;
+}
+.vs-description-secondary {
+  color: rgba(var(--vs-secondary), 1) !important;
+}
+.vs-description-danger {
+  color: rgba(var(--vs-danger), 1) !important;
+}
+.vs-description-success {
+  color: rgba(var(--vs-success), 1) !important;
+}
+.vs-description-warning {
+  color: rgba(var(--vs-warning), 1) !important;
+}
+.vs-description-dark {
+  color: rgba(var(--vs-dark), 1) !important;
+}
+.vs-description-light {
+  color: rgba(var(--vs-light), 1) !important;
+}

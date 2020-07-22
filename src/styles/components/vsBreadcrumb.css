@@ -1,0 +1,76 @@
+
+.vs-breadcrumb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.vs-breadcrumb.vs-align-left {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+.vs-breadcrumb.vs-align-center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.vs-breadcrumb.vs-align-right {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+.vs-breadcrumb .disabled-link {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.vs-breadcrumb--ol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0.75rem 1rem;
+  list-style-type: none;
+}
+.vs-breadcrumb--ol li.vs-active {
+  cursor: default;
+}
+.vs-breadcrumb--ol a {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  color: rgba(0, 0, 0, 0.4);
+}
+.vs-breadcrumb--ol a:focus,
+.vs-breadcrumb--ol a:hover {
+  color: rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+}
+.vs-breadcrum--separator {
+  color: rgba(0, 0, 0, 0.4);
+  padding: 0 0.5rem 0 0.5rem;
+}
+.vs-breadcrum--separator.material-icons {
+  vertical-align: middle;
+  font-size: inherit;
+}
+.vs-breadcrumb-text-primary {
+  color: rgba(var(--vs-primary), 1);
+}
+.vs-breadcrumb-text-secondary {
+  color: rgba(var(--vs-secondary), 1);
+}
+.vs-breadcrumb-text-danger {
+  color: rgba(var(--vs-danger), 1);
+}
+.vs-breadcrumb-text-success {
+  color: rgba(var(--vs-success), 1);
+}
+.vs-breadcrumb-text-warning {
+  color: rgba(var(--vs-warning), 1);
+}
+.vs-breadcrumb-text-dark {
+  color: rgba(var(--vs-dark), 1);
+}
+.vs-breadcrumb-text-light {
+  color: rgba(var(--vs-light), 1);
+}

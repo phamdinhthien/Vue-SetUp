@@ -1,0 +1,252 @@
+
+
+.dropdown-group-enter-active,
+.dropdown-group-leave-active {
+  -webkit-transition: opacity 0.25s;
+  transition: opacity 0.25s;
+}
+.dropdown-group-enter,
+.dropdown-group-leave-to {
+  opacity: 0;
+}
+.vs-con-dropdown {
+  position: relative;
+  display: inline-block;
+  border: 0;
+  background: transparent;
+}
+.vs-con-dropdown * {
+  pointer-events: none;
+}
+.vs-con-dropdown a {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+.vs-con-dropdown:active {
+  opacity: 1 !important;
+}
+.vuesax-app-is-rtl .vs-con-dropdown .a-icon {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+.vs-dropdown--group {
+  position: relative;
+  list-style: none;
+  width: calc(100% - 6px);
+  margin-left: 3px;
+  width: auto;
+  display: block;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.vs-dropdown--group.marginIcon {
+  padding-right: 25px;
+}
+.vs-dropdown--group.marginIcon:hover .con-dropdown--group {
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+.vs-dropdown--group.marginIcon:hover > .icon-group {
+  -webkit-transform: translateY(-50%) rotate(-180deg);
+  transform: translateY(-50%) rotate(-180deg);
+  opacity: 0;
+}
+.vs-dropdown--group-label {
+  font-size: 0.9375em;
+  font-weight: 400;
+  pointer-events: none;
+}
+.vs-dropdown--group-icon {
+  position: absolute;
+  right: 4px;
+  font-size: 1.125em;
+  top: 50%;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.con-dropdown--group-con-ul {
+  padding-left: 3px;
+  position: relative;
+  right: 0;
+  top: 0;
+  min-width: 130px;
+  width: auto;
+  z-index: 1000;
+  background: inherit;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+.con-dropdown--group-ul {
+  padding-top: 5px;
+  padding-left: 0;
+  position: relative;
+  background: #fff;
+  border-radius: 5px;
+}
+.no-cascading {
+  font-weight: 700;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-top: 5px !important;
+  margin-left: 0;
+}
+.no-cascading > h3 {
+  padding: 0 10px;
+  font-size: 0.9375em;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  cursor: default;
+}
+.no-cascading .con-dropdown--group-no-cascading {
+  width: 100% !important;
+  font-weight: 700;
+  height: auto !important;
+  opacity: 1 !important;
+  border-left: 1px solid transparent !important;
+}
+.no-cascading .con-dropdown--group-no-cascading ul {
+  width: 100%;
+  -webkit-box-shadow: 0 5px 20px 0 transparent !important;
+  box-shadow: 0 5px 20px 0 transparent !important;
+  padding-left: 0 !important;
+}
+.vs-dropdown--item {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  position: relative;
+  z-index: 100;
+  border-radius: 5px;
+  width: calc(100% - 6px);
+  margin: 0 3px;
+  list-style: none;
+  font-weight: 400 !important;
+  font-size: 0.9375em;
+}
+.vuesax-app-is-rtl .vs-dropdown--item {
+  text-align: right;
+}
+.vuesax-app-is-ltr .vs-dropdown--item {
+  text-align: left;
+}
+.vs-dropdown--item .vs-dropdown--item-link {
+  background: inherit !important;
+  color: inherit !important;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+  position: relative;
+  display: block;
+  color: rgba(0, 0, 0, 0.7);
+}
+.vs-dropdown--item .vs-dropdown--item-link.disabled {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none !important;
+  cursor: default;
+  opacity: 0.5 !important;
+  color: rgba(0, 0, 0, 0.5) !important;
+}
+.vs-dropdown--item.divider {
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  margin-top: 5px;
+}
+.dropdownx-enter,
+.dropdownx-leave-to {
+  opacity: 0;
+  -webkit-transform: translate(-100%, 8px) !important;
+  transform: translate(-100%, 8px) !important;
+}
+.con-vs-dropdown--menu {
+  padding-top: 10px;
+  position: absolute;
+  height: auto;
+  width: auto;
+  z-index: 40000;
+  -webkit-transform: translate(-100%);
+  transform: translate(-100%);
+  -webkit-transition: opacity 0.25s, width 0.3s ease, -webkit-transform 0.25s;
+  transition: opacity 0.25s, width 0.3s ease, -webkit-transform 0.25s;
+  transition: opacity 0.25s, transform 0.25s, width 0.3s ease;
+  transition: opacity 0.25s, transform 0.25s, width 0.3s ease,
+    -webkit-transform 0.25s;
+}
+.con-vs-dropdown--menu.rightx .vs-dropdown--menu--after {
+  left: 30px;
+  right: 0;
+}
+.con-vs-dropdown--menu:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 10px;
+  position: absolute;
+  left: 0;
+  top: 100%;
+}
+.vs-dropdown--menu {
+  background: #fff;
+  padding-left: 0 !important;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  position: relative;
+  margin: 0;
+}
+.vs-dropdown-right--menu--after {
+  left: 20px;
+}
+.vs-dropdown--menu--after,
+.vs-dropdown-right--menu--after {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  display: block;
+  background: #fff;
+  -webkit-transform: rotate(45deg) translate(-7px);
+  transform: rotate(45deg) translate(-7px);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.vs-dropdown--menu--after {
+  right: 10px;
+}
+.notHeight .vs-dropdown-menu:after {
+  top: auto;
+  bottom: 0;
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-transform: rotate(45deg) translate(7px);
+  transform: rotate(45deg) translate(7px);
+}
+.vs-dropdown--custom {
+  padding: 5px !important;
+  padding-top: 8px !important;
+}

@@ -1,0 +1,346 @@
+
+.vs-input-number {
+  position: relative;
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 5px 10px;
+  background: #f5f5f5;
+  padding: 2px;
+  border-radius: 5px;
+}
+.vs-input-number.isChangeValue .vs-input-number--input {
+  -webkit-transform: translateY(-2px);
+  transform: translateY(-2px);
+  opacity: 0.5;
+}
+.vs-input-number .vs-input-number--input {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  width: 40px;
+  min-width: 40px;
+  border: 0;
+  text-align: center;
+  background: transparent;
+  padding: 4px;
+  -moz-appearance: textfield;
+}
+.vs-input-number
+  .vs-input-number--input[type="number"]::-webkit-inner-spin-button,
+.vs-input-number
+  .vs-input-number--input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.vs-input-number button {
+  min-width: 22px;
+  min-height: 22px;
+  padding: 0;
+  margin: 0;
+  display: block;
+  position: relative;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: #fff;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.vs-input-number button:disabled {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+}
+.vs-input-number button i {
+  font-size: 0.9rem;
+}
+.vuesax-app-is-rtl .vs-input-number button.vs-input-number--button-plus {
+  -webkit-transform: translate(-10px);
+  transform: translate(-10px);
+}
+.vuesax-app-is-ltr .vs-input-number button.vs-input-number--button-plus {
+  -webkit-transform: translate(10px);
+  transform: translate(10px);
+}
+.vuesax-app-is-rtl .vs-input-number button.vs-input-number--button-plus:active {
+  -webkit-transform: translate(-10px) scale(0.9);
+  transform: translate(-10px) scale(0.9);
+}
+.vuesax-app-is-ltr .vs-input-number button.vs-input-number--button-plus:active {
+  -webkit-transform: translate(10px) scale(0.9);
+  transform: translate(10px) scale(0.9);
+}
+.vs-input-number button.vs-input-number--button-plus.limit,
+.vs-input-number button.vs-input-number--button-plus:disabled {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.vuesax-app-is-rtl .vs-input-number button.vs-input-number--button-less {
+  -webkit-transform: translate(10px);
+  transform: translate(10px);
+}
+.vuesax-app-is-ltr .vs-input-number button.vs-input-number--button-less {
+  -webkit-transform: translate(-10px);
+  transform: translate(-10px);
+}
+.vuesax-app-is-rtl .vs-input-number button.vs-input-number--button-less:active {
+  -webkit-transform: translate(10px) scale(0.9);
+  transform: translate(10px) scale(0.9);
+}
+.vuesax-app-is-ltr .vs-input-number button.vs-input-number--button-less:active {
+  -webkit-transform: translate(-10px) scale(0.9);
+  transform: translate(-10px) scale(0.9);
+}
+.vs-input-number button.vs-input-number--button-less.limit,
+.vs-input-number button.vs-input-number--button-less:disabled {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.vs-input-number.vs-input-number-size-medium input {
+  padding: 3px;
+  font-size: 0.8rem;
+}
+.vs-input-number.vs-input-number-size-medium button {
+  min-width: 19px;
+  min-height: 19px;
+}
+.vs-input-number.vs-input-number-size-medium button i {
+  font-size: 0.8rem;
+}
+.vuesax-app-is-rtl
+  .vs-input-number.vs-input-number-size-medium
+  button.vs-input-number--button-plus {
+  -webkit-transform: translate(-8px);
+  transform: translate(-8px);
+}
+.vuesax-app-is-ltr
+  .vs-input-number.vs-input-number-size-medium
+  button.vs-input-number--button-plus {
+  -webkit-transform: translate(8px);
+  transform: translate(8px);
+}
+.vuesax-app-is-rtl
+  .vs-input-number.vs-input-number-size-medium
+  button.vs-input-number--button-plus:active {
+  -webkit-transform: translate(-8px) scale(0.9);
+  transform: translate(-8px) scale(0.9);
+}
+.vuesax-app-is-ltr
+  .vs-input-number.vs-input-number-size-medium
+  button.vs-input-number--button-plus:active {
+  -webkit-transform: translate(8px) scale(0.9);
+  transform: translate(8px) scale(0.9);
+}
+.vuesax-app-is-rtl
+  .vs-input-number.vs-input-number-size-medium
+  button.vs-input-number--button-less {
+  -webkit-transform: translate(8px);
+  transform: translate(8px);
+}
+.vuesax-app-is-ltr
+  .vs-input-number.vs-input-number-size-medium
+  button.vs-input-number--button-less {
+  -webkit-transform: translate(-8px);
+  transform: translate(-8px);
+}
+.vuesax-app-is-rtl
+  .vs-input-number.vs-input-number-size-medium
+  button.vs-input-number--button-less:active {
+  -webkit-transform: translate(8px) scale(0.9);
+  transform: translate(8px) scale(0.9);
+}
+.vuesax-app-is-ltr
+  .vs-input-number.vs-input-number-size-medium
+  button.vs-input-number--button-less:active {
+  -webkit-transform: translate(-8px) scale(0.9);
+  transform: translate(-8px) scale(0.9);
+}
+.vs-input-number.vs-input-number-size-small .vs-input-number--input {
+  padding: 2px;
+  font-size: 0.7rem;
+}
+.vs-input-number.vs-input-number-size-small button {
+  min-width: 16px;
+  min-height: 16px;
+}
+.vs-input-number.vs-input-number-size-small button i {
+  font-size: 0.7rem;
+}
+.vuesax-app-is-rtl
+  .vs-input-number.vs-input-number-size-small
+  button.vs-input-number--button-plus {
+  -webkit-transform: translate(-7px);
+  transform: translate(-7px);
+}
+.vuesax-app-is-ltr
+  .vs-input-number.vs-input-number-size-small
+  button.vs-input-number--button-plus {
+  -webkit-transform: translate(7px);
+  transform: translate(7px);
+}
+.vuesax-app-is-rtl
+  .vs-input-number.vs-input-number-size-small
+  button.vs-input-number--button-plus:active {
+  -webkit-transform: translate(-7px) scale(0.9);
+  transform: translate(-7px) scale(0.9);
+}
+.vuesax-app-is-ltr
+  .vs-input-number.vs-input-number-size-small
+  button.vs-input-number--button-plus:active {
+  -webkit-transform: translate(7px) scale(0.9);
+  transform: translate(7px) scale(0.9);
+}
+.vuesax-app-is-rtl
+  .vs-input-number.vs-input-number-size-small
+  button.vs-input-number--button-less {
+  -webkit-transform: translate(7px);
+  transform: translate(7px);
+}
+.vuesax-app-is-ltr
+  .vs-input-number.vs-input-number-size-small
+  button.vs-input-number--button-less {
+  -webkit-transform: translate(-7px);
+  transform: translate(-7px);
+}
+.vuesax-app-is-rtl
+  .vs-input-number.vs-input-number-size-small
+  button.vs-input-number--button-less:active {
+  -webkit-transform: translate(7px) scale(0.9);
+  transform: translate(7px) scale(0.9);
+}
+.vuesax-app-is-ltr
+  .vs-input-number.vs-input-number-size-small
+  button.vs-input-number--button-less:active {
+  -webkit-transform: translate(-7px) scale(0.9);
+  transform: translate(-7px) scale(0.9);
+}
+.vs-input-number.vs-input-number-size-mini .vs-input-number--input {
+  padding: 1px;
+  font-size: 0.6rem;
+}
+.vs-input-number.vs-input-number-size-mini button {
+  min-width: 14px;
+  min-height: 14px;
+}
+.vs-input-number.vs-input-number-size-mini button i {
+  font-size: 0.6rem;
+}
+.vuesax-app-is-rtl
+  .vs-input-number.vs-input-number-size-mini
+  button.vs-input-number--button-plus {
+  -webkit-transform: translate(-6px);
+  transform: translate(-6px);
+}
+.vuesax-app-is-ltr
+  .vs-input-number.vs-input-number-size-mini
+  button.vs-input-number--button-plus {
+  -webkit-transform: translate(6px);
+  transform: translate(6px);
+}
+.vuesax-app-is-rtl
+  .vs-input-number.vs-input-number-size-mini
+  button.vs-input-number--button-plus:active {
+  -webkit-transform: translate(-6px) scale(0.9);
+  transform: translate(-6px) scale(0.9);
+}
+.vuesax-app-is-ltr
+  .vs-input-number.vs-input-number-size-mini
+  button.vs-input-number--button-plus:active {
+  -webkit-transform: translate(6px) scale(0.9);
+  transform: translate(6px) scale(0.9);
+}
+.vuesax-app-is-rtl
+  .vs-input-number.vs-input-number-size-mini
+  button.vs-input-number--button-less {
+  -webkit-transform: translate(6px);
+  transform: translate(6px);
+}
+.vuesax-app-is-ltr
+  .vs-input-number.vs-input-number-size-mini
+  button.vs-input-number--button-less {
+  -webkit-transform: translate(-6px);
+  transform: translate(-6px);
+}
+.vuesax-app-is-rtl
+  .vs-input-number.vs-input-number-size-mini
+  button.vs-input-number--button-less:active {
+  -webkit-transform: translate(6px) scale(0.9);
+  transform: translate(6px) scale(0.9);
+}
+.vuesax-app-is-ltr
+  .vs-input-number.vs-input-number-size-mini
+  button.vs-input-number--button-less:active {
+  -webkit-transform: translate(-6px) scale(0.9);
+  transform: translate(-6px) scale(0.9);
+}
+.vs-input-number-primary button {
+  background: rgba(var(--vs-primary), 1);
+}
+.vs-input-number-primary button:hover {
+  -webkit-box-shadow: 0 3px 12px 0 rgba(var(--vs-primary), 0.4);
+  box-shadow: 0 3px 12px 0 rgba(var(--vs-primary), 0.4);
+}
+.vs-input-number-secondary button {
+  background: rgba(var(--vs-secondary), 1);
+}
+.vs-input-number-secondary button:hover {
+  -webkit-box-shadow: 0 3px 12px 0 rgba(var(--vs-secondary), 0.4);
+  box-shadow: 0 3px 12px 0 rgba(var(--vs-secondary), 0.4);
+}
+.vs-input-number-danger button {
+  background: rgba(var(--vs-danger), 1);
+}
+.vs-input-number-danger button:hover {
+  -webkit-box-shadow: 0 3px 12px 0 rgba(var(--vs-danger), 0.4);
+  box-shadow: 0 3px 12px 0 rgba(var(--vs-danger), 0.4);
+}
+.vs-input-number-success button {
+  background: rgba(var(--vs-success), 1);
+}
+.vs-input-number-success button:hover {
+  -webkit-box-shadow: 0 3px 12px 0 rgba(var(--vs-success), 0.4);
+  box-shadow: 0 3px 12px 0 rgba(var(--vs-success), 0.4);
+}
+.vs-input-number-warning button {
+  background: rgba(var(--vs-warning), 1);
+}
+.vs-input-number-warning button:hover {
+  -webkit-box-shadow: 0 3px 12px 0 rgba(var(--vs-warning), 0.4);
+  box-shadow: 0 3px 12px 0 rgba(var(--vs-warning), 0.4);
+}
+.vs-input-number-dark button {
+  background: rgba(var(--vs-dark), 1);
+}
+.vs-input-number-dark button:hover {
+  -webkit-box-shadow: 0 3px 12px 0 rgba(var(--vs-dark), 0.4);
+  box-shadow: 0 3px 12px 0 rgba(var(--vs-dark), 0.4);
+}
+.vs-input-number-light button {
+  background: rgba(var(--vs-light), 1);
+}
+.vs-input-number-light button:hover {
+  -webkit-box-shadow: 0 3px 12px 0 rgba(var(--vs-light), 0.4);
+  box-shadow: 0 3px 12px 0 rgba(var(--vs-light), 0.4);
+}

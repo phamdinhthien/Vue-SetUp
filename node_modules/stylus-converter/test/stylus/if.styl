@@ -1,0 +1,22 @@
+a = 10
+b = 5
+
+colorTheme()
+  'red'
+
+div
+  if a > b
+    color: red
+  else if a < b
+    color: yellow
+  else
+    color: blue
+
+.test-conditionals
+  unless colorTheme() is 'red'
+    color: red
+  if colorTheme() is 'blue' {
+    color: red
+  } else {
+    color: blue
+  }

@@ -1,0 +1,9 @@
+
+.vs-spacer {
+  padding: 0;
+  margin: 0;
+  -webkit-box-flex: 1 !important;
+  -ms-flex-positive: 1 !important;
+  flex-grow: 1 !important;
+  background: transparent;
+}

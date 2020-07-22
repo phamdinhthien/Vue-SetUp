@@ -1,0 +1,170 @@
+
+.vs-collapse {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  padding: 10px;
+}
+.vs-collapse.shadow .open-item {
+  -webkit-transform: scale(1.01);
+  transform: scale(1.01);
+  -webkit-box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.05);
+  margin-top: 5px;
+  border-bottom: 0 solid transparent;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+.vuesax-app-is-rtl
+  .vs-collapse.shadow
+  .open-item
+  .vs-collapse-item--icon-header {
+  -webkit-transform: translate(50%, -50%) rotate(180deg);
+  transform: translate(50%, -50%) rotate(180deg);
+}
+.vuesax-app-is-ltr
+  .vs-collapse.shadow
+  .open-item
+  .vs-collapse-item--icon-header {
+  -webkit-transform: translate(-50%, -50%) rotate(180deg);
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+.vs-collapse.shadow .open-item .con-content-item {
+  opacity: 1;
+}
+.vs-collapse.margin .vs-collapse-item {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  -webkit-box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  border-bottom: 0 solid transparent;
+}
+.vs-collapse.margin .open-item .con-content-item {
+  opacity: 1;
+}
+.vuesax-app-is-rtl
+  .vs-collapse.margin
+  .open-item
+  .vs-collapse-item--icon-header {
+  -webkit-transform: translate(50%, -50%) rotate(180deg);
+  transform: translate(50%, -50%) rotate(180deg);
+}
+.vuesax-app-is-ltr
+  .vs-collapse.margin
+  .open-item
+  .vs-collapse-item--icon-header {
+  -webkit-transform: translate(-50%, -50%) rotate(180deg);
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+.vs-collapse.border {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+}
+.vs-collapse.border .vs-collapse-item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.vs-collapse.border .open-item .con-content-item {
+  opacity: 1;
+}
+.vuesax-app-is-rtl
+  .vs-collapse.border
+  .open-item
+  .vs-collapse-item--icon-header {
+  -webkit-transform: translate(50%, -50%) rotate(180deg);
+  transform: translate(50%, -50%) rotate(180deg);
+}
+.vuesax-app-is-ltr
+  .vs-collapse.border
+  .open-item
+  .vs-collapse-item--icon-header {
+  -webkit-transform: translate(-50%, -50%) rotate(180deg);
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+.vs-collapse.default .open-item .con-content--item {
+  opacity: 1;
+}
+.vuesax-app-is-rtl
+  .vs-collapse.default
+  .open-item
+  .vs-collapse-item--icon-header {
+  -webkit-transform: translate(50%, -50%) rotate(180deg);
+  transform: translate(50%, -50%) rotate(180deg);
+}
+.vuesax-app-is-ltr
+  .vs-collapse.default
+  .open-item
+  .vs-collapse-item--icon-header {
+  -webkit-transform: translate(-50%, -50%) rotate(180deg);
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+.vs-collapse-item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.vs-collapse-item.open-item .con-content--item {
+  opacity: 1;
+}
+.vs-collapse-item.disabledx {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+  z-index: 999;
+}
+.vs-collapse-item:last-child {
+  border-bottom: 0 solid transparent !important;
+}
+.vs-collapse-item--header {
+  display: block;
+  padding: 10px;
+  position: relative;
+}
+.vs-collapse-item--header,
+.vs-collapse-item--icon-header {
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.vs-collapse-item--icon-header {
+  position: absolute;
+  top: 50%;
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+.vuesax-app-is-rtl .vs-collapse-item--icon-header {
+  left: 0;
+}
+.vuesax-app-is-ltr .vs-collapse-item--icon-header {
+  right: 0;
+}
+.vuesax-app-is-rtl .vs-collapse-item--icon-header {
+  -webkit-transform: translate(50%, -50%);
+  transform: translate(50%, -50%);
+}
+.vuesax-app-is-ltr .vs-collapse-item--icon-header {
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.vs-collapse-item--content {
+  overflow: hidden;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.con-content--item {
+  padding: 10px;
+  padding-top: 0;
+  font-size: 0.85rem;
+  opacity: 0.2;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}

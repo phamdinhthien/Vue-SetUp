@@ -1,0 +1,52 @@
+
+.vs-timepicker {
+  display: inline-block;
+  position: relative;
+}
+.vs-timepicker .con-vs-time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.vs-timepicker .con-vs-time .time {
+  padding: 5px 8px;
+  margin: 0 2px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  position: relative;
+}
+.con-ul-time {
+  overflow: hidden;
+  max-height: 180px;
+  position: absolute;
+  z-index: 20000;
+}
+.ul-time {
+  position: relative;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  max-height: 180px;
+  overflow: auto;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.05);
+}
+.ul-time li {
+  padding: 5px 8px;
+  list-style: none;
+  text-align: center;
+  cursor: pointer;
+}
+.ul-time li.active-time {
+  background: #000;
+}

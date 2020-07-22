@@ -1,0 +1,89 @@
+
+.vs-icon {
+  color: inherit;
+  text-align: center;
+  font-size: 1rem;
+}
+.vs-icon.large {
+  font-size: 3.125rem;
+  width: 3.125rem;
+  height: 3.125rem;
+}
+.vs-icon.medium {
+  font-size: 2.31rem;
+  width: 2.31rem;
+  height: 2.31rem;
+}
+.vs-icon.small {
+  font-size: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.vs-icon-bg {
+  width: 1rem;
+  height: 1rem;
+}
+.vs-icon-bg.bg-large {
+  width: 3.125rem;
+  height: 3.125rem;
+}
+.vs-icon-bg.bg-medium {
+  width: 2.31rem;
+  height: 2.31rem;
+}
+.vs-icon-bg.bg-small {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.round {
+  border-radius: 50%;
+}
+.con-vs-icon-bg-primary,
+.dot-count-primary {
+  background: rgba(var(--vs-primary), 1);
+}
+.vs-icon-primary {
+  color: rgba(var(--vs-primary), 1);
+}
+.con-vs-icon-bg-secondary,
+.dot-count-secondary {
+  background: rgba(var(--vs-secondary), 1);
+}
+.vs-icon-secondary {
+  color: rgba(var(--vs-secondary), 1);
+}
+.con-vs-icon-bg-danger,
+.dot-count-danger {
+  background: rgba(var(--vs-danger), 1);
+}
+.vs-icon-danger {
+  color: rgba(var(--vs-danger), 1);
+}
+.con-vs-icon-bg-success,
+.dot-count-success {
+  background: rgba(var(--vs-success), 1);
+}
+.vs-icon-success {
+  color: rgba(var(--vs-success), 1);
+}
+.con-vs-icon-bg-warning,
+.dot-count-warning {
+  background: rgba(var(--vs-warning), 1);
+}
+.vs-icon-warning {
+  color: rgba(var(--vs-warning), 1);
+}
+.con-vs-icon-bg-dark,
+.dot-count-dark {
+  background: rgba(var(--vs-dark), 1);
+}
+.vs-icon-dark {
+  color: rgba(var(--vs-dark), 1);
+}
+.con-vs-icon-bg-light,
+.dot-count-light {
+  background: rgba(var(--vs-light), 1);
+}
+.vs-icon-light {
+  color: rgba(var(--vs-light), 1);
+}

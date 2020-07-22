@@ -1,0 +1,195 @@
+.dialog-t-enter, .dialog-t-leave-to   {
+  opacity: 0 !important;
+}.dialog-t-enter .vs-dialog  {
+  transform: scale(0.9) !important;
+}.dialog-t-leave-to .vs-dialog  {
+  transform: scale(0.9) !important;
+}
+
+
+
+@-webkit-keyframes rebound  {
+  0%    {
+        transform: scale(0.9);
+  }50%    {
+        transform: scale(1.08);
+  }100%  {
+        transform: scale(1);
+  }
+}
+
+
+
+@-moz-keyframes rebound  {
+  0%    {
+        transform: scale(0.9);
+  }50%    {
+        transform: scale(1.08);
+  }100%  {
+        transform: scale(1);
+  }
+}
+
+
+
+@-ms-keyframes rebound  {
+  0%    {
+        transform: scale(0.9);
+  }50%    {
+        transform: scale(1.08);
+  }100%  {
+        transform: scale(1);
+  }
+}
+
+
+
+@-o-keyframes rebound  {
+  0%    {
+        transform: scale(0.9);
+  }50%    {
+        transform: scale(1.08);
+  }100%  {
+        transform: scale(1);
+  }
+}
+
+
+
+@keyframes rebound  {
+  0%    {
+        transform: scale(0.9);
+  }50%    {
+        transform: scale(1.08);
+  }100%  {
+        transform: scale(1);
+  }
+}.dialog-t-enter .vs-dialog-cancel, .dialog-t-leave-to .vs-dialog-cancel  {
+  border-radius: 50% !important;
+  @include propWithDir(scale(1), null, 8px -8px, scale(0.5) !important);
+}.dialog-t-enter .vs-dialog-text, .dialog-t-leave-to .vs-dialog-text  {
+  opacity: 0;
+  @include propWithDir(scale(1), null, -15px 0px, !important);
+}.dialog-t-enter .after, .dialog-t-leave-to .after  {
+  height: 0% !important;
+}.dialog-t-enter header h3, .dialog-t-leave-to header h3  {
+  @include propWithDir(scale(1), null, -50px 0px, !important);
+  opacity: 0;
+}.dialog-t-enter footer button, .dialog-t-leave-to footer button  {
+  transform: translate(0, 10px);
+  opacity: 0;
+}.con-vs-dialog {
+  transition: all 0.2s;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  @include propWithDir(left, null, 0px);
+  top: 0px;
+  z-index: 30000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;.vs-dialog-dark {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    @include propWithDir(left, null, 0px);
+    top: 0px;
+    height: 100%;
+    z-index: 10;
+    transition: all 0.25s ease;
+    opacity: 1;
+  }.vs-dialog {
+    transition: all 0.2s;
+    z-index: 100;
+    width: calc(100% - 20px);
+    margin: 10px;
+    max-width: 400px;
+    border-radius: 6px;
+    box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.1);
+    background: rgb(255, 255, 255);
+    animation: rebound 0.3s;&.locked {
+
+      transform: scale(1.02);
+    }.vs-dialog-text {
+      padding: 10px;
+      font-size: 0.875em;
+      transition: all 0.23s ease 0.1s;
+    }
+    header {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgb(248, 248, 248);
+      border-radius: 5px 5px;
+      position: relative;.con-title-after {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        border-radius: 5px 5px 0px 0px;
+      }
+      span.after {
+        transition: all 0.23s ease 0.1s;
+        position: absolute;
+        @include propWithDir(left, null, 0px);
+        top: 50%;
+        transform: translate(0, -50%);
+        width: 3px;
+        height: 100%;
+        display: block;
+      }
+      h3 {
+        transition: all 0.23s ease 0.1s;
+        padding: 8px;
+        @include propWithDir(8px, left, 12px);
+
+        font-size: 1.2rem;
+        margin: 0px;
+      }.vs-dialog-cancel {
+        transition: all 0.23s ease 0.1s;
+        position: relative;
+        padding: 8px;
+        cursor: pointer;
+        box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        @include propWithDir(translate(0, -50%), null, 8px -8px);
+        background: rgb(255, 255, 255);
+        font-size: 1.25em;&:hover {
+          box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
+          @include propWithDir(translate(0, -50%), null, 5px -5px);
+        }
+      }
+    }
+    footer {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      position: relative;
+      button {
+        @include propWithDir(0px, left, 0px);
+      }&:before {
+        content: '';
+        top: 0px;
+        left: 0px;
+        position: absolute;
+        width: 90%;
+        @include propWithDir(0px, 0px, 5%);
+        height: 1px;
+        background: rgba(0, 0, 0, 0.05);
+      }
+    }
+  }
+}
+
+@each $colorx, $value in $vs-colors {
+  .vs-dialog-#{$colorx} {
+    .vs-dialog {
+      .vs-dialog-header {
+        color: getColor($colorx, 1);
+      }.after {
+        background: getColor($colorx, 1);
+      }
+    }
+  }
+}
