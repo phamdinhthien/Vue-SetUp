@@ -1,18 +1,28 @@
 <template>
   <div id="app">
-    <treeselect v-model="value" :multiple="true" :options="generateTree(options, 'name')" />
+    
+    <vs-tree-select :options="options" label="name" @select="handleSelect">
+
+    </vs-tree-select>
+    <base-layout>
+      <template v-slot:header>
+        This is header
+      </template>
+    </base-layout>
   </div>
 </template>
  
 <script>
 // import the component
-import Treeselect from "@riophae/vue-treeselect";
+import VsTreeSelect from './components/vsTreeSelect/vsTreeSelect.vue';
 // import the styles
 import "@riophae/vue-treeselect/dist/vue-treeselect.css";
 
+import BaseLayout from './views/BaseLayout.vue';
+
 export default {
   // register the component
-  components: { Treeselect },
+  components: { VsTreeSelect, BaseLayout },
   data() {
     return {
       // define the default value
@@ -40,27 +50,9 @@ export default {
     };
   },
   methods: {
-    generateTree(data, name) {
-      let map = {},
-        node,
-        roots = [],
-        i;
-      for (i = 0; i < data.length; i++) {
-        map[data[i].id] = i;
-        data[i].label = data[i][name];
-      }
-
-      for (i = 0; i < data.length; i++) {
-        data[i].parentId ? data[map[data[i].parentId]].children = [] : null;
-        node = data[i];
-        if (node.parentId) {
-            data[map[node.parentId]].children.push(node);
-        } else {
-          roots.push(node);
-        }
-      }
-      return roots;
-    },
-  },
+    handleSelect(value){
+      console.log(value)
+    }
+  }
 };
 </script>

@@ -25,7 +25,7 @@
           'hasIcon':icon,
           'icon-after-input':iconAfter
         }]"
-        :placeholder="null"
+        :placeholder="placeholder"
         :value="value"
         v-bind="$attrs"
         :type="$attrs.type?$attrs.type:'text'"
@@ -137,6 +137,14 @@ export default {
       default:null,
       type:[String,Number]
     },
+     placeholder:{
+      default:"",
+      type:[String,Number]
+    },
+     InputNoBorder:{
+      default:true,
+      type:[String,Boolean]
+    },
     label:{
       default:null,
       type:[String,Number]
@@ -192,6 +200,9 @@ export default {
     descriptionText:{
       default: null,
       type:String
+    }, InputBackground:{
+      default: 'white',
+      type:String
     },
     size:{
       default:'normal',
@@ -227,9 +238,14 @@ export default {
   }),
   computed:{
     style(){
-      return {
-        border: `1px solid ${this.isFocus?_color.getColor(this.color,1):'rgba(0, 0, 0,.2)'}`,
+      let style = {}
+      if(this.InputNoBorder){
+        style["border"] = 'none'
+      } else{
+        style["border"] = `1px solid ${this.isFocus?_color.getColor(this.color,1):'rgba(0, 0, 0,.2)'}`;
       }
+      style["background"] = this.InputBackground;
+      return style;
     },
     styleLabel(){
       return {

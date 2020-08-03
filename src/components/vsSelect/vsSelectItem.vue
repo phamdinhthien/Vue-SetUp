@@ -54,6 +54,9 @@ export default {
     getText:null,
     valueInputx:''
   }),
+  mounted(){
+    // console.log(this.$attrs)
+  },
   computed:{
     disabledx(){
       if(this.$parent.parent.multiple){
@@ -150,6 +153,9 @@ export default {
     this.putValue()
   },
   methods:{
+    callFunction(){
+      console.log("sac")
+    },
     changeHover(booleanx){
       this.hoverx = booleanx
     },
@@ -158,8 +164,8 @@ export default {
     },
     backspace(){
       if(this.$parent.parent.autocomplete){
-        let valueInput = this.$parent.parent.$refs.inputselect.value
-        this.$parent.parent.$refs.inputselect.value = valueInput.substr(0,valueInput.length-1)
+        let valueInputx = this.$parent.parent.$refs.inputselect.value
+        this.$parent.parent.$refs.inputselect.value = valueInputx.substr(0,valueInputx.length-1)
         this.$parent.parent.$refs.inputselect.focus()
       }
     },

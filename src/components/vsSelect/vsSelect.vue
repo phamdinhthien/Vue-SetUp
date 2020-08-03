@@ -18,6 +18,7 @@
       <input
         ref="inputselect"
         v-bind="$attrs"
+        v-model="valueInput"
         :readonly="!autocomplete"
         class="input-select vs-select--input"
         type="text"
@@ -41,7 +42,7 @@
         class="icon-select vs-select--icon"
         @click.once
       ></vs-icon>
-
+  <div>{{abc}}</div>
       <transition name="fadeselect">
         <div
           v-show="active"
@@ -192,7 +193,9 @@ export default {
     clear: false,
     scrollx: false,
     cords: {},
-    filterx: false
+    filterx: false,
+    valueInput: '',
+    abc: ''
   }),
   computed: {
     activeBtnClear() {
@@ -205,8 +208,9 @@ export default {
       return this;
     },
     listeners() {
+      const {keydown} = this.$listeners
       return {
-        ...this.$listeners,
+        keydown,
         blur: event => {
           if (
             this.autocomplete && event.relatedTarget
@@ -224,10 +228,11 @@ export default {
         },
         input: event => {
           if (this.autocomplete) {
-            this.$emit("input-change", event);
+            this.$emit("input-change", this.valueInput);
           }
         },
         keyup: event => {
+          //  this.$emit("input-change", event);
           if (event.key == "ArrowDown" || event.key == "ArrowUp") {
             event.preventDefault();
             let childrens = this.$children.filter(item => {
@@ -249,8 +254,13 @@ export default {
   },
   watch: {
     value(event) {
+      this.abc = this.value
       this.valuex = this.value;
       this.$emit("change", event);
+      // this.$children.callFunction();
+      this.$nextTick(() => {
+        console.log("nextTick");
+      })
     },
     active() {
       this.$nextTick(() => {
@@ -290,6 +300,7 @@ export default {
     }
   },
   updated() {
+    console.log("updated")
     if (!this.active) {
       this.changeValue();
     }

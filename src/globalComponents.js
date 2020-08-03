@@ -81,5 +81,3 @@ import vsTh from '@/components/vsTable/vsTh.vue';
 Vue.component(vsTh.name, vsTh);
 import vsTr from '@/components/vsTable/vsTr.vue';
 Vue.component(vsTr.name, vsTr);
-import vsTrExpand from '@/components/vsTable/vsTrExpand.vue';
-Vue.component(vsTrExpand.name, vsTrExpand);

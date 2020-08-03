@@ -43,7 +43,7 @@
               <slot name="thead"></slot>
             </tr>
           </thead>
-          <slot :data="datax"></slot>
+          <slot :data="datax" name="tbody"></slot>
         </table>
       </div>
       <div
@@ -152,7 +152,7 @@ export default {
     maxItemsx: 5,
     hasExpadableData: false,
     currentSortKey: null,
-    currentSortType: null
+    currentSortType: "abc"
   }),
   computed:{
     getTotalPages() {
@@ -237,6 +237,9 @@ export default {
         this.loadData()
         this.currentx = 1
       }
+    },
+    datax(){
+      console.log("acs")
     }
   },
   mounted () {
@@ -257,7 +260,6 @@ export default {
     loadData() {
       let max = Math.ceil(this.currentx * this.maxItemsx)
       let min = max - this.maxItemsx
-
       if(!this.searchx || this.sst) {
         this.datax = this.pagination ? this.getItems(min, max) : this.sortItems(this.data) || [];
       } else {
@@ -298,10 +300,10 @@ export default {
     sort(key, sortType) {
       this.currentSortKey = key;
       this.currentSortType = sortType;
-      if(this.sst) {
-        this.$emit('sort', key, sortType)
-        return
-      }
+      // if(this.sst) {
+      //   this.$emit('sort', key, sortType)
+      //   return
+      // }
       this.loadData();
     },
     normalize(string) {
@@ -336,7 +338,7 @@ export default {
         }
 
         this.$emit('input', val)
-        this.$emit('selected', tr)
+        // this.$emit('selected', tr)
       }
     },
     clicktr (tr, isTr) {
@@ -349,10 +351,10 @@ export default {
         }
 
         this.$emit('input', val)
-        this.$emit('selected', tr)
+        // this.$emit('selected', tr)
       } else if (isTr && !this.onlyClickCheckbox) {
         this.$emit('input', tr)
-        this.$emit('selected', tr)
+        // this.$emit('selected', tr)
       }
     },
     dblclicktr (tr, isTr) {

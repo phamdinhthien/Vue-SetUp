@@ -27,11 +27,11 @@
   }
 }.vs-input--icon {
   position: absolute;
-  @include propWithDir(left, null, 5px);
+  left: 5px;
   z-index: 100;
   font-size: 1.1rem;
-  @include propWithDir(border, right, 1px solid rgba(0, 0, 0, 0.1));
-  @include propWithDir(padding, right, 3px);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  padding-right: 3px;
   color: rgba(0, 0, 0, 0.4);
   cursor: default;
   user-select: none;
@@ -117,6 +117,7 @@
   box-sizing: border-box;
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
+  padding-left: 32px;
   width: 100%;&.small {
     padding: 0.2rem;
     @include propWithDir(0.2rem, left, 0.55rem);
